@@ -5,32 +5,28 @@ import PetCard from "../petCard/PetCard";
 import PlaningToAdoptPet from "../planingToAdoptPet/PlaningToAdoptPet";
 import Forwardicon from "../../../assets/images/petCardImages/IconRightArrow.svg";
 import { Link } from "react-router-dom";
-import { getAnimals } from "../../../redux/UserSlice";
-import { useAppDispatch, useAppSelector } from "../../../redux/Hooks";
+import { getAnimals } from "../../../redux/userSlice";
+import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
+import { Response } from "../../../type/Type";
 
 export default function Pet() {
-  type Photos = {
-    small: string;
-    medium: string;
-    large: string;
-    full: string;
-  };
-
-  interface Response {
-    name: string;
-    image_url: string;
-    age: string;
-    id: number;
-    photos: Photos[] | [];
-    animalId: [];
-  }
-
   const dispatch = useAppDispatch();
   const petData = useAppSelector((state) => state.user.data);
-
+  const [loading, setLoading] = useState(true);
   useEffect(() => {
-    dispatch(getAnimals());
+    const fetchData = async () => {
+      await dispatch(getAnimals());
+      setLoading(false);
+    };
+    fetchData();
   }, [dispatch]);
+  if (loading) {
+    return (
+      <div className="flex justify-center items-center h-[500px]">
+        <div className="animate-spin rounded-full h-20 w-20 border-t-4 border-purp border-solid"></div>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -43,38 +39,39 @@ export default function Pet() {
         </div>
       </div>
       <div className="flex flex-wrap justify-center text-center">
-        {petData.slice(16, 20).map((item: Response, i: number) => {
-          return (
-            <div key={i} className="w-auto mx-2 h-[301.2px] mb-4">
-              <div className="w-[231.2px] h-[301.2px] xsm:mt-10 mt-6 bg-opacity-0 rounded-lg shadow">
-                <div className=" bg-zinc-200 rounded-tl-lg rounded-tr-lg">
-                  <Link to={`/details/${item.id}`}>
-                    {" "}
-                    <img
-                      className="w-[231.2px] rounded-tl-lg rounded-tr-lg object-cover h-[231.20px]"
-                      src={item?.photos[0]?.full || alternate}
-                      alt={item.age}
-                    />
-                  </Link>
-                </div>
-                <div className=" top-[-10px] h-[70px] ">
-                  <div className="flex rounded-tl-3xl rounded-tr-3xl relative h-[9px] bg-white top-[-8px]"></div>
-                  <div className="h-8 ">
-                    <div className=" text-violet-800 text-xl inline-flex">
-                      {item.name.slice(0, 15)}
+        {petData &&
+          petData.slice(16, 20).map((item: Response, i: number) => {
+            return (
+              <div key={i} className="w-auto mx-2 h-[301.2px] mb-4">
+                <div className="w-[231.2px] h-[301.2px] xsm:mt-10 mt-6 bg-opacity-0 rounded-lg shadow">
+                  <div className=" bg-zinc-200 rounded-tl-lg rounded-tr-lg">
+                    <Link to={`/details/${item.id}`}>
+                      {" "}
+                      <img
+                        className="w-[231.2px] rounded-tl-lg rounded-tr-lg object-cover h-[231.20px]"
+                        src={item?.photos[0]?.full || alternate}
+                        alt={item.age}
+                      />
+                    </Link>
+                  </div>
+                  <div className=" top-[-10px] h-[70px] ">
+                    <div className="flex rounded-tl-3xl rounded-tr-3xl relative h-[9px] bg-white top-[-8px]"></div>
+                    <div className="h-8 ">
+                      <div className=" text-violet-800 text-xl inline-flex">
+                        {item.name.slice(0, 15)}
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="w-[45px] h-[45px] p-2.5 top-[-293px] left-[85px] relative bg-white bg-opacity-75 rounded-[22.50px] justify-center items-center inline-flex">
+                    <div className="w-[25px] h-[25px] relative flex-col justify-start items-start flex">
+                      <img src={iconFavorite2} alt="" />
                     </div>
                   </div>
                 </div>
-
-                <div className="w-[45px] h-[45px] p-2.5 top-[-293px] left-[85px] relative bg-white bg-opacity-75 rounded-[22.50px] justify-center items-center inline-flex">
-                  <div className="w-[25px] h-[25px] relative flex-col justify-start items-start flex">
-                    <img src={iconFavorite2} alt="" />
-                  </div>
-                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
 
         <PetCard />
       </div>
@@ -89,36 +86,37 @@ export default function Pet() {
         </div>
       </div>
       <div className="flex flex-wrap justify-center text-center mb-[50px] ">
-        {petData.slice(11, 15).map((item: Response, i: number) => {
-          return (
-            <div key={i} className="w-auto mx-2 h-[301.2px] mb-4">
-              <div className="w-[231.2px] h-[301.2px] xx:mt-10 mt-6 bg-opacity-0 rounded-lg shadow">
-                <div className=" bg-zinc-200 rounded-tl-lg rounded-tr-lg">
-                  <Link to={`/details/${item.id}`}>
-                    <img
-                      className="w-[231.2px] rounded-tl-lg rounded-tr-lg object-cover h-[231.20px]"
-                      src={item?.photos[0]?.full || alternate}
-                      alt={item.age}
-                    />
-                  </Link>
-                </div>
-                <div className=" top-[-10px] h-[70px] ">
-                  <div className="flex rounded-tl-3xl rounded-tr-3xl relative h-[9px] bg-white top-[-8px]"></div>
-                  <div className="h-8 ">
-                    <div className=" text-violet-800 text-xl inline-flex">
-                      {item.name.slice(0, 10)}
+        {petData &&
+          petData.slice(11, 15).map((item: Response, i: number) => {
+            return (
+              <div key={i} className="w-auto mx-2 h-[301.2px] mb-4">
+                <div className="w-[231.2px] h-[301.2px] xx:mt-10 mt-6 bg-opacity-0 rounded-lg shadow">
+                  <div className=" bg-zinc-200 rounded-tl-lg rounded-tr-lg">
+                    <Link to={`/details/${item.id}`}>
+                      <img
+                        className="w-[231.2px] rounded-tl-lg rounded-tr-lg object-cover h-[231.20px]"
+                        src={item?.photos[0]?.full || alternate}
+                        alt={item.age}
+                      />
+                    </Link>
+                  </div>
+                  <div className=" top-[-10px] h-[70px] ">
+                    <div className="flex rounded-tl-3xl rounded-tr-3xl relative h-[9px] bg-white top-[-8px]"></div>
+                    <div className="h-8 ">
+                      <div className=" text-violet-800 text-xl inline-flex">
+                        {item.name.slice(0, 10)}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="w-[45px] h-[45px] p-2.5 top-[-293px] left-[85px] relative bg-white bg-opacity-75 rounded-[22.50px] justify-center items-center inline-flex">
+                    <div className="w-[25px] h-[25px] relative flex-col justify-start items-start flex">
+                      <img src={iconFavorite2} alt="" />
                     </div>
                   </div>
                 </div>
-                <div className="w-[45px] h-[45px] p-2.5 top-[-293px] left-[85px] relative bg-white bg-opacity-75 rounded-[22.50px] justify-center items-center inline-flex">
-                  <div className="w-[25px] h-[25px] relative flex-col justify-start items-start flex">
-                    <img src={iconFavorite2} alt="" />
-                  </div>
-                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
 
         <PetCard />
       </div>

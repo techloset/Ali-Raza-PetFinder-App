@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
-import userReducer from "./UserSlice";
-import animalReducer from "../redux/AnimalSlice";
-import organizationReducer from "../redux/OrganizationSlice";
+import userReducer from "./userSlice";
+import animalReducer from "./animalSlice";
+import organizationReducer from "./organizationSlice";
 
 export const store = configureStore({
   reducer: {
@@ -10,6 +10,5 @@ export const store = configureStore({
     organization: organizationReducer,
   },
 });
-
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

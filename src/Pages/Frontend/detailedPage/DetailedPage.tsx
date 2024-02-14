@@ -7,66 +7,11 @@ import LocationIcon from "../../../assets/images/detailedPageImg/icon-location.s
 import PhoneIcon from "../../../assets/images/detailedPageImg/icon-phone.svg";
 import alternative from "../../../assets/images/petCardImages/IconLogofaceColorGray.svg";
 import { useParams } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../../../redux/Hooks";
-import { getAnimal } from "../../../redux/AnimalSlice";
-import {
-  GetOrganization,
-  organization,
-} from "../../../redux/OrganizationSlice";
+import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
+import { getAnimal } from "../../../redux/animalSlice";
 import PetCard from "../petCard/PetCard";
-
-type Photos = {
-  small: string;
-  medium: string;
-  large: string;
-  full: string;
-};
-type Address = {
-  address1: string;
-  city: string;
-  country: string;
-  postcode: number;
-  status: string;
-};
-type Contact = {
-  email: string;
-  phone: number;
-  address: Address[] | [];
-};
-type Colors = {
-  primary: string | null;
-  secondary: string | null;
-  tertiary: string | null;
-};
-type Breeds = {
-  mixed: boolean;
-  primary: string;
-  secondary: string;
-  unknown: boolean;
-};
-interface petData {
-  age: string;
-  gender: string;
-  name: string;
-  description: string;
-  contact: Contact[] | [];
-  photos: Photos[] | [];
-  status: string;
-  species: string;
-  size: string;
-  type: string;
-  colors: Colors[] | [];
-  coat: string;
-  breeds: Breeds[] | [];
-  organization_id: string;
-  url: string;
-}
-// interface Response {
-//   name: string;
-//   image_url: string;
-//   age: string;
-//   photos: Photos[] | [];
-// }
+import { GetOrganization } from "../../../redux/organizationSlice";
+import { organization } from "../../../type/Type";
 
 export default function DetailedPage() {
   const { animalId } = useParams<{ animalId: string }>();
@@ -176,27 +121,27 @@ export default function DetailedPage() {
             </div>
           </div>
 
-          <div className=" max-w-[393px] md:max-h-[463px] max-h-[463px] mx-auto md:sm-auto xx:mx-auto lg:max-h-[390px] sm:flex sm:content-center pb-0 col-span-full  lg:col-span-4  text-white p-8 rounded-xl shadow-lg mb-8 md:mb-0 bg-purp">
+          <div className=" max-w-[393px] md:max-h-[393px] xx:max-h-[493px] xx:mx-4 max-h-[393px] mx-auto md:sm-auto lg:max-h-[393px] sm:flex sm:content-center pb-0 col-span-full  lg:col-span-4  text-white p-8 rounded-lg shadow-lg  md:mb-0 bg-purp">
             <div className=" pb-0 mb-0">
               <div className="text-xl font-normal max-mt-6 text-center flex flex-wrap">
-                Considering {petDetail?.name} for adoption?
+                Considering {petDetail?.name.slice(0, 7)} for adoption?
               </div>
               <div className="rounded-3xl  text-center mt-10 bg-white border-2 text-purp hover:bg-purp hover:text-white hover:border-2 hover:bordre-white">
                 <button
                   type="button"
-                  className="h-[45PX] text-sm font-normal  "
+                  className="h-[45PX] text-sm font-normal  cursor-pointer"
                 >
                   START YOUR INQUIRY
                 </button>
               </div>
-              <div className="flex items-center justify-center rounded-3xl h-[45PX] text-center mt-10 border-2 border-white hover:bg-white hover:text-purp">
+              <div className="flex items-center justify-center rounded-3xl h-[45PX] text-center mt-10 border-2 border-white hover:bg-white hover:text-purp cursor-pointer">
                 READ FAQs
               </div>
-              <hr className="max-w-[410px] mt-16 border-1 border-white mx-[-32px]" />
+              <hr className="max-w-[410px] mt-24 border-1 border-white mx-[-32px]" />
               <div className="h-[65px]  flex justify-around items-center sticky">
-                <div className="text-center ">SPONSOR</div>
-
-                <div className="flex xx:gap-1 md:gap-2 justify-center ">
+                <div className="text-center cursor-pointer">SPONSOR</div>
+                <div className="w-[1px] h-[65px] bg-white"></div>
+                <div className="flex xx:gap-1 md:gap-2 justify-center cursor-pointer">
                   <img src={FaviorteHeart} alt="" />
                   FAVORITE
                 </div>
@@ -230,7 +175,6 @@ export default function DetailedPage() {
                       "Address is not defined"}{" "}
                     {petDetail?.contact?.address.state}
                   </div>
-                  {/* <hr className="mt-4 border-1 border-black " /> */}
                 </div>
               </div>
               <div className="mt-8 flex items-center pb-5 border-b-[1px] border-slate-400">
@@ -243,10 +187,9 @@ export default function DetailedPage() {
                       petDetail?.contact?.email ||
                       "No phone number given"}
                   </div>
-                  {/* <hr className=" mt-4 border-1 border-black " /> */}
                 </div>
               </div>
-              <div className="flex items-center justify-center rounded-3xl h-[45PX] text-center mt-10 border-2 border-black hover:bg-purp hover:text-white hover:border-2 hover:border-white hover:shadow-xl">
+              <div className="flex items-center justify-center rounded-3xl h-[45PX] text-center mt-10 border-2 border-black hover:bg-purp hover:text-white hover:border-2 hover:border-white hover:shadow-xl cursor-pointer">
                 <button type="button">MORE ABOUT US</button>
               </div>
             </div>

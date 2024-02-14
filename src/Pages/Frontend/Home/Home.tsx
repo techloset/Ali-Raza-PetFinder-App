@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <div
-        className="h-[410px] grow bg-center bg-cover  sm:bg-cover xx:bg-cover md:bg-auto bg-no-repeat grid"
+        className="h-[410px] grow bg-center bg-cover  sm:bg-cover xx:bg-cover md:bg-auto bg-no-repeat grid border-b-[10px] border-[#6504B5]"
         style={{ backgroundImage: `url(${image})` }}
       >
         <div className="pt-5 jsutify-center ">
@@ -52,7 +52,7 @@ export default function Home() {
         </div>
       </div>
       <div className="sm:flex gap-3 xx:mt-32 xx:grid xx:grid-col-10 justify-center relative bottom-[80px] flex-wrap   ">
-        <div className="w-[181px] h-[154.59px] rounded-md flex flex-col items-center shadow-xl gap-5 hover:scale-105 bg-white">
+        <div className="w-[181px] h-[154.59px] rounded-md flex flex-col items-center shadow-xl gap-5 hover:scale-105 bg-white cursor-pointer">
           <div>
             <img
               src={img1}
@@ -63,7 +63,7 @@ export default function Home() {
           </div>
           <div className="h-[20px]">Dogs</div>
         </div>
-        <div className="w-[181px] h-[154.59px] rounded-md flex flex-col items-center shadow-xl gap-5 hover:scale-105 bg-white">
+        <div className="w-[181px] h-[154.59px] rounded-md flex flex-col items-center shadow-xl gap-5 hover:scale-105 bg-white cursor-pointer">
           <div>
             <img
               src={img2}
@@ -74,7 +74,7 @@ export default function Home() {
           </div>
           <div className="h-[20px]">Cats</div>
         </div>
-        <div className="w-[181px] h-[154.59px] rounded-md flex flex-col items-center shadow-xl gap-5 hover:scale-105 bg-white">
+        <div className="w-[181px] h-[154.59px] rounded-md flex flex-col items-center shadow-xl gap-5 hover:scale-105 bg-white cursor-pointer">
           <div>
             <img
               src={img3}
@@ -85,7 +85,7 @@ export default function Home() {
           </div>
           <div className="h-[20px]">Other Animals</div>
         </div>
-        <div className="w-[181px] h-[154.59px] rounded-md flex flex-col items-center shadow-xl gap-5 hover:scale-105 bg-white">
+        <div className="w-[181px] h-[154.59px] rounded-md flex flex-col items-center shadow-xl gap-5 hover:scale-105 bg-white cursor-pointer">
           <div>
             <img
               src={img4}

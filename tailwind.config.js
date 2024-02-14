@@ -23,7 +23,9 @@ module.exports = {
     extend: {
       screens:{
           'xx': {'min':'200px', 'max':'640px'},
-          'bug': {'min':'750px', 'max':'767px'}
+          'bug': {'min':'750px', 'max':'767px'},
+          'footerbug': {'min':'1000px', 'max':'1320px'},
+          'footerbug2': {'min':'1027px', 'max':'1220px'}
       },
       // backgroundImage:{
       //   'hero-image':"url('../../../assets/images/HeroIcons/photo-1623387641168-d9803ddd3f35.avif')"
