@@ -1,15 +1,12 @@
-import image from "../../../assets/images/HeroIcons/MainSectionBgImg.png";
-import searchIcon from "../../../assets/images/HeroIcons/IconSearchBackground.svg";
-import img1 from "../../../assets/images/HeroIcons/Dog.svg";
-import img2 from "../../../assets/images/HeroIcons/IconCatPortrait.svg";
-import img3 from "../../../assets/images/HeroIcons/IconPawOutline.svg";
-import img4 from "../../../assets/images/HeroIcons/IconSheltersRescues.svg";
-import AvailPetsAdopt from "../AvailablePetsForAdoption/AvailablePetsForAdoption";
+import image from "../../../assets/images/heroIcons/MainSectionBgImg.png";
+import searchIcon from "../../../assets/images/heroIcons/IconSearchBackground.svg";
+import img1 from "../../../assets/images/heroIcons/Dog.svg";
+import img2 from "../../../assets/images/heroIcons/IconCatPortrait.svg";
+import img3 from "../../../assets/images/heroIcons/IconPawOutline.svg";
+import img4 from "../../../assets/images/heroIcons/IconSheltersRescues.svg";
+import AvailPetsAdopt from "../availablePetsForAdoption/AvailablePetsForAdoption";
 import ArticleSection from "../articleSection/ArticleSection";
-
-
 export default function Home() {
-
   return (
     <>
       <div

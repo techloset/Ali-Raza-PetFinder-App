@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import iconFavorite2 from "../../../assets/images/PetCardImages/IconFavorite.svg";
-import alternate from "../../../assets/images/PetCardImages/IconLogofaceColorGray.svg";
+import iconFavorite2 from "../../../assets/images/petCardImages/IconFavorite.svg";
+import alternate from "../../../assets/images/petCardImages/IconLogofaceColorGray.svg";
 import PetCard from "../petCard/PetCard";
 import PlaningToAdoptPet from "../planingToAdoptPet/PlaningToAdoptPet";
-import Forwardicon from '../../../assets/images/PetCardImages/IconRightArrow.svg'
+import Forwardicon from "../../../assets/images/petCardImages/IconRightArrow.svg";
 import { Link } from "react-router-dom";
-import { getAnimals } from "../../../redux/userSlice";
-import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
+import { getAnimals } from "../../../redux/UserSlice";
+import { useAppDispatch, useAppSelector } from "../../../redux/Hooks";
 
 export default function Pet() {
   type Photos = {
@@ -25,8 +25,8 @@ export default function Pet() {
     animalId: [];
   }
 
-  const dispatch = useAppDispatch()
-  const petData = useAppSelector((state) => state.user.data)
+  const dispatch = useAppDispatch();
+  const petData = useAppSelector((state) => state.user.data);
 
   useEffect(() => {
     dispatch(getAnimals());
@@ -43,21 +43,19 @@ export default function Pet() {
         </div>
       </div>
       <div className="flex flex-wrap justify-center text-center">
-
         {petData.slice(16, 20).map((item: Response, i: number) => {
           return (
-
             <div key={i} className="w-auto mx-2 h-[301.2px] mb-4">
               <div className="w-[231.2px] h-[301.2px] xsm:mt-10 mt-6 bg-opacity-0 rounded-lg shadow">
                 <div className=" bg-zinc-200 rounded-tl-lg rounded-tr-lg">
-
-                  <Link to={`/details/${item.id}`}> <img
-                    className="w-[231.2px] rounded-tl-lg rounded-tr-lg object-cover h-[231.20px]"
-                    src={item?.photos[0]?.full || alternate}
-                    alt={item.age}
-                  />
+                  <Link to={`/details/${item.id}`}>
+                    {" "}
+                    <img
+                      className="w-[231.2px] rounded-tl-lg rounded-tr-lg object-cover h-[231.20px]"
+                      src={item?.photos[0]?.full || alternate}
+                      alt={item.age}
+                    />
                   </Link>
-
                 </div>
                 <div className=" top-[-10px] h-[70px] ">
                   <div className="flex rounded-tl-3xl rounded-tr-3xl relative h-[9px] bg-white top-[-8px]"></div>

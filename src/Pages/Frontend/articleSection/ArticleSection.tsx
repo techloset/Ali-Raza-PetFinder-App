@@ -1,8 +1,7 @@
-import React from "react";
-import dogMainImg from "../../../assets/images/ArticalSectionImg/ArticalMainImage.png";
-import dogDpImg from "../../../assets/images/ArticalSectionImg/dogimageSmall.png";
-import kittenMainImg from "../../../assets/images/ArticalSectionImg/kittenMainImage.png";
-import kittenImg from "../../../assets/images/ArticalSectionImg/kittenSmall.png";
+import dogMainImg from "../../../assets/images/articalSectionImg/ArticalMainImage.png";
+import dogDpImg from "../../../assets/images/articalSectionImg/DogimageSmall.png";
+import kittenMainImg from "../../../assets/images/articalSectionImg/kittenMainImage.png";
+import kittenImg from "../../../assets/images/articalSectionImg/kittenSmall.png";
 export default function ArticleSection() {
   return (
     <>
@@ -13,7 +12,6 @@ export default function ArticleSection() {
           </div>
           <div className="max-w-[610px] bg-white h-[18px] rounded-t-2xl relative bottom-3"></div>
           <div className="h-[100px] flex justify-center  relative bottom-[80px]">
-            {" "}
             <img
               src={dogDpImg}
               alt=""
@@ -43,7 +41,6 @@ export default function ArticleSection() {
           </div>
           <div className="max-w-[610px] bg-white h-[18px] rounded-t-2xl relative bottom-3"></div>
           <div className="h-[100px] flex justify-center  relative bottom-[80px]">
-            {" "}
             <img
               src={kittenImg}
               alt=""

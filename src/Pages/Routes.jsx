@@ -1,15 +1,14 @@
-import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import Frontend from "../Pages/Frontend/index"
+import Frontend from "../pages/frontend"
 
 
 export default function Index() {
   return (
-   <>
-    <Routes>
-      <Route path='/*' element={<Frontend />} />
-    </Routes>
-   </>
+    <>
+      <Routes>
+        <Route path='/*' element={<Frontend />} />
+      </Routes>
+    </>
   )
 }
 

@@ -16,17 +16,13 @@ export default function Header() {
       <div className=" mx-auto h-16 flex justify-around ">
         <div className="xx:gap-2 flex gap-12">
           <img src={img} alt="logo" />
-          <div className="flex justify-center items-center" >
+          <div className="flex justify-center items-center">
             <button className="flex gap-3" type="button" onClick={showNav}>
-            <div className="grid content-center font-medium text-purple hover:scale-105">
-              {" "}
-              All About Pets{" "}
-            </div>
-              <img 
-                className="my-auto "
-                src={icon}
-                alt="forwardicon"
-              />
+              <div className="grid content-center font-medium text-purple hover:scale-105">
+                {" "}
+                All About Pets{" "}
+              </div>
+              <img className="my-auto " src={icon} alt="forwardicon" />
             </button>
           </div>
         </div>
