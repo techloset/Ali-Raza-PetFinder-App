@@ -120,7 +120,7 @@ export default function DetailedPage() {
             </div>
             <hr className="w-[90%] mx-auto mt-8 xx:hidden sm:hidden  md:flex" />
             <div className="mt-8">
-              <div className="inline-flex sm:mt-16 md:mt-0">
+              <div className="inline-flex sm:mt-16 md:mt-0 mx-4 pb-4">
                 <div className=" ">
                   <img src={AlertImg} alt="alert icon" className="w-6 h-6" />
                 </div>
@@ -160,15 +160,15 @@ export default function DetailedPage() {
             </div>
           </div>
 
-          <div className="max-w-[393px] border-2  col-span-full md:mx-auto sm:mx-auto xx:mx-auto lg:col-start-7 lg:col-span-4 bg-white p-8 rounded-2xl shadow-lg  md:mb-0 relative  lg:bottom-56 lg:top-[-120px]  xx:top-8 sm:top-8 md:top-16 pb-0">
+          <div className="max-w-[393px] border-2  col-span-full md:mx-auto sm:mx-auto xx:mx-auto lg:col-start-7 lg:col-span-4 bg-white p-8 rounded-2xl shadow md:mb-0 relative  lg:bottom-56 lg:top-[-120px]  xx:top-8 sm:top-8 md:top-16 pb-0">
             <div className="flex bg-purp  justify-center items-center relative bottom-20 h-[100px] w-[100px] rounded-full mx-auto">
               <img src={PawHand} alt="" className="h-[60px] w-[58px]" />
             </div>
-            <div className=" relative bottom-16">
+            <div className=" relative bottom-12">
               <div className="text-3xl text-center">
                 {petDetail?.organization_id} Animals In Need
               </div>
-              <div className="text-center">
+              <div className="text-center mt-2">
                 {petDetail?.contact?.address.city ||
                   petDetail?.contact?.address.address2 ||
                   "Address is not defined"}
@@ -200,7 +200,7 @@ export default function DetailedPage() {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center justify-center rounded-3xl h-[45PX] text-center mt-10 border-2 border-black hover:bg-purp hover:text-white hover:border-2 hover:border-white hover:shadow-xl cursor-pointer">
+              <div className="flex items-center justify-center rounded-3xl h-[45PX] text-center mt-10 border-2 border-black hover:bg-purp hover:text-white hover:border-2 hover:border-white hover:shadow cursor-pointer">
                 <button type="button">MORE ABOUT US</button>
               </div>
             </div>

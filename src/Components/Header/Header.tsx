@@ -27,7 +27,7 @@ export default function Header() {
                 All About Pets
               </div>
               <img
-                className={` ease-in-out duration-1000  ${
+                className={` ease-in-out duration-500  ${
                   show ? "rotate-180" : "rotate-0"
                 } my-auto py-2`}
                 src={icon}
