@@ -1,16 +1,19 @@
-import image from "../../../assets/images/heroIcons/MainSectionBgImg.png";
-import searchIcon from "../../../assets/images/heroIcons/IconSearchBackground.svg";
-import img1 from "../../../assets/images/heroIcons/Dog.svg";
-import img2 from "../../../assets/images/heroIcons/IconCatPortrait.svg";
-import img3 from "../../../assets/images/heroIcons/IconPawOutline.svg";
-import img4 from "../../../assets/images/heroIcons/IconSheltersRescues.svg";
 import AvailPetsAdopt from "../availablePetsForAdoption/AvailablePetsForAdoption";
 import ArticleSection from "../articleSection/ArticleSection";
+import {
+  feedback,
+  image,
+  img1,
+  img2,
+  img3,
+  img4,
+  searchIcon,
+} from "../../../type/Type";
 export default function Home() {
   return (
     <>
       <div
-        className="w-full h-[410px] grow bg-center bg-cover  sm:bg-cover xx:bg-cover md:bg-auto bg-no-repeat grid "
+        className="h-[410px] border-b-[10px] border-b-purp shadow bg-cover bg-center bg-no-repeat  "
         style={{ backgroundImage: `url(${image})` }}
       >
         <div className="pt-5 jsutify-center ">
@@ -38,7 +41,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="w-auto">
+        <div className="w-auto mt-24">
           <div className="text-center flex justify-center">
             <h1 className="text-4xl h-[54px]  text-white font-bold font-arial  xx:pb-32">
               Find your new best friend
@@ -51,7 +54,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="sm:flex gap-3 xx:mt-32 xx:grid xx:grid-col-10 justify-center relative bottom-[80px] flex-wrap   ">
+      <div className="sm:flex gap-3 xx:mt-32 xx:grid xx:grid-col-10 justify-center relative bottom-[80px] flex-wrap">
         <div className="w-[181px] h-[154.59px] rounded-md flex flex-col items-center shadow-xl gap-5 hover:scale-105 bg-white cursor-pointer">
           <div>
             <img
@@ -97,7 +100,9 @@ export default function Home() {
           <div className="h-[20px]">Shelters & Rescues</div>
         </div>
       </div>
-
+      <div className="flex flex-col-reverse justify-end items-end ">
+        <img src={feedback} className="w-[25px] h-[75px] cursor-pointer" />
+      </div>
       <AvailPetsAdopt />
       <ArticleSection />
     </>

@@ -43,7 +43,7 @@ export const OrganizaionSlice = createSlice({
       })
       .addCase(
         GetOrganization.fulfilled,
-        (state, action: PayloadAction<any>) => {
+        (state, action) => {
           state.loading = false;
           state.error = null;
           state.organization = action.payload;
@@ -51,9 +51,9 @@ export const OrganizaionSlice = createSlice({
       )
       .addCase(
         GetOrganization.rejected,
-        (state, action: PayloadAction<any>) => {
+        (state, action) => {
           state.loading = false;
-          state.error = action.payload;
+          state.error = action.payload as string |null;
           state.organization = [];
         }
       );

@@ -1,6 +1,5 @@
-import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Home from "./home/home";
+import Home from "./home/Home";
 import AvilablePets from "./availablePetsForAdoption/AvailablePetsForAdoption";
 import PlaningToAdoptPet from "./planingToAdoptPet/PlaningToAdoptPet";
 import AvailPetsAdopt from "./availablePetsForAdoption/AvailablePetsForAdoption";

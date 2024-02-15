@@ -1,7 +1,10 @@
-import dogMainImg from "../../../assets/images/articalSectionImg/ArticalMainImage.png";
-import dogDpImg from "../../../assets/images/articalSectionImg/DogimageSmall.png";
-import kittenMainImg from "../../../assets/images/articalSectionImg/kittenMainImage.png";
-import kittenImg from "../../../assets/images/articalSectionImg/kittenSmall.png";
+import {
+  dogDpImg,
+  dogMainImg,
+  kittenImg,
+  kittenMainImg,
+} from "../../../type/Type";
+
 export default function ArticleSection() {
   return (
     <>

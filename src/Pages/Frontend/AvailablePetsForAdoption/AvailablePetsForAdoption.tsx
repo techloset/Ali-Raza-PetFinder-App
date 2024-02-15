@@ -1,13 +1,15 @@
-import React, { useEffect, useState } from "react";
-import iconFavorite2 from "../../../assets/images/petCardImages/IconFavorite.svg";
-import alternate from "../../../assets/images/petCardImages/IconLogofaceColorGray.svg";
+import { useEffect, useState } from "react";
 import PetCard from "../petCard/PetCard";
 import PlaningToAdoptPet from "../planingToAdoptPet/PlaningToAdoptPet";
-import Forwardicon from "../../../assets/images/petCardImages/IconRightArrow.svg";
 import { Link } from "react-router-dom";
 import { getAnimals } from "../../../redux/userSlice";
 import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
-import { Response } from "../../../type/Type";
+import {
+  Forwardicon,
+  Response,
+  alternate,
+  iconFavorite2,
+} from "../../../type/Type";
 
 export default function Pet() {
   const dispatch = useAppDispatch();

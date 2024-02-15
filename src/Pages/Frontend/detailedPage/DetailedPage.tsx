@@ -1,20 +1,25 @@
 import { useEffect, useState } from "react";
-import AlertImg from "../../../assets/images/detailedPageImg/icon-alert.svg";
 import { Link } from "react-router-dom";
-import FaviorteHeart from "../../../assets/images/detailedPageImg/icon-favorite-heart.svg";
-import PawHand from "../../../assets/images/detailedPageImg/paw-on-hand.svg";
-import LocationIcon from "../../../assets/images/detailedPageImg/icon-location.svg";
-import PhoneIcon from "../../../assets/images/detailedPageImg/icon-phone.svg";
-import alternative from "../../../assets/images/petCardImages/IconLogofaceColorGray.svg";
 import { useParams } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
 import { getAnimal } from "../../../redux/animalSlice";
 import PetCard from "../petCard/PetCard";
 import { GetOrganization } from "../../../redux/organizationSlice";
-import { organization } from "../../../type/Type";
+import {
+  alternative,
+  organization,
+  FaviorteHeart,
+  PawHand,
+  LocationIcon,
+  PhoneIcon,
+  AlertImg,
+  feedback,
+} from "../../../type/Type";
 
 export default function DetailedPage() {
   const { animalId } = useParams<{ animalId: string }>();
+  const [loading, setLoading] = useState(true);
+  const [orgLoading, setOrgLoading] = useState(true);
 
   const dispatch = useAppDispatch();
   const petDetail = useAppSelector((state) => state.animalData.animal);
@@ -22,14 +27,13 @@ export default function DetailedPage() {
     (state) => state.organization.organization
   );
 
-  const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
         await dispatch(getAnimal(`${animalId}`));
         if (petDetail && petDetail?.organization_id) {
           await dispatch(GetOrganization(`${petDetail?.organization_id}`));
+          setOrgLoading(false);
         }
       } catch (error) {
         console.log("Error fetching Animal Data:", error);
@@ -40,7 +44,7 @@ export default function DetailedPage() {
     fetchData();
   }, [dispatch, animalId, petDetail?.organization_id]);
 
-  if (loading) {
+  if (loading || orgLoading) {
     return (
       <div className="flex justify-center items-center h-[500px]">
         <div className="animate-spin rounded-full h-20 w-20 border-t-4 border-purp border-solid"></div>
@@ -56,18 +60,20 @@ export default function DetailedPage() {
             <div className="animate-spin rounded-full h-20 w-20 border-t-4 border-purp border-solid"></div>
           </div>
         )}
-        <div className="h-[810px] bg-slate-200 ">
+        <div className="h-[710px] bg-slate-200 ">
           <div className="h-[486px] xx:h-[340px] w-auto flex justify-center bg-black">
             <img
               src={(!loading && petDetail?.photos?.[0]?.full) || alternative}
               alt="dog image"
-              className="h-full"
+              className="h-full bg-[#E6E4E9]"
             />
           </div>
+          <div className="relative bottom-[75px] xx:bottom-4  flex flex-col-reverse justify-end items-end">
+            <img src={feedback} className="w-[25px] h-[75px] z-10" />
+          </div>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-10 gap-8 w-full max-w-5xl mx-auto xx:px-0 px-4 md:px-0 relative bottom-72 xx:bottom-96 sm:bottom-56 md:bottom-68 lg:bottom-72 xX:justify-evenly">
-          <div className="col-span-full lg:col-span-6 bg-white xx:p-0 p-8 xx:rounded-none rounded-xl shadow-lg mb-8  md:mb-0 ">
+        <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-10 gap-8 w-full max-w-5xl mx-auto xx:px-0 px-4 md:px-0 relative xx:bottom-96 sm:bottom-56 md:bottom-64 lg:bottom-44 xX:justify-evenly">
+          <div className="col-span-full lg:col-span-6 bg-white xx:mt-12    xx:rounded-none rounded-xl shadow-lg mb-8  md:mb-0 ">
             <div className="">
               <div className="flex text-4xl font-400 font-normal xx:px-0 px-7 py-6 xx:justify-center">
                 {petDetail?.name || "Name is not Given"}
@@ -82,7 +88,7 @@ export default function DetailedPage() {
                 <div className="">
                   {petDetail?.contact?.address?.city ||
                     petDetail?.contact?.address.address2 ||
-                    "Address is not defined"}{" "}
+                    "Address is not defined"}
                   {petDetail?.contact?.address?.state}
                 </div>
               </div>
@@ -126,12 +132,12 @@ export default function DetailedPage() {
             </div>
           </div>
 
-          <div className=" max-w-[393px] md:max-h-[393px] xx:max-h-[493px] xx:mx-4 max-h-[393px] mx-auto md:sm-auto lg:max-h-[393px] sm:flex sm:content-center pb-0 col-span-full  lg:col-span-4  text-white p-8 rounded-lg shadow-lg  md:mb-0 bg-purp">
+          <div className=" max-w-[393px] md:max-h-[293px] xx:max-h-[293px] xx:mx-4 max-h-[293px] mx-auto md:sm-auto lg:max-h-[293px] sm:flex sm:content-center pb-0 col-span-full  lg:col-span-4  text-white p-8 rounded-lg shadow-lg  md:mb-0 bg-purp">
             <div className=" pb-0 mb-0">
               <div className="text-xl font-normal max-mt-6 text-center flex flex-wrap">
                 Considering {petDetail?.name.slice(0, 7)} for adoption?
               </div>
-              <div className="rounded-3xl  text-center mt-10 bg-white border-2 text-purp hover:bg-purp hover:text-white hover:border-2 hover:bordre-white">
+              <div className="rounded-3xl  text-center mt-4 mb-4 bg-white border-2 text-purp hover:bg-purp hover:text-white hover:border-2 hover:bordre-white">
                 <button
                   type="button"
                   className="h-[45PX] text-sm font-normal  cursor-pointer"
@@ -139,13 +145,13 @@ export default function DetailedPage() {
                   START YOUR INQUIRY
                 </button>
               </div>
-              <div className="flex items-center justify-center rounded-3xl h-[45PX] text-center mt-10 border-2 border-white hover:bg-white hover:text-purp cursor-pointer">
+              <div className="flex items-center justify-center rounded-3xl h-[45PX] text-center xx:mt-4 md:mt-8 border-2 border-white hover:bg-white hover:text-purp cursor-pointer">
                 READ FAQs
               </div>
-              <hr className="max-w-[410px] mt-24 border-1 border-white mx-[-32px]" />
-              <div className="h-[65px]  flex justify-around items-center sticky">
+              <hr className="max-w-[410px] mt-6 border-1 border-black mx-[-32px]" />
+              <div className="md:h-[67px] xx:h-[64px] sm:h-[55px] flex justify-around items-center sticky">
                 <div className="text-center cursor-pointer">SPONSOR</div>
-                <div className="w-[1px] h-[65px] bg-white"></div>
+                <div className="w-[1px] md:h-[65px] xx:h-[55px] relative xx:bottom-1 bg-black"></div>
                 <div className="flex xx:gap-1 md:gap-2 justify-center cursor-pointer">
                   <img src={FaviorteHeart} alt="" />
                   FAVORITE
@@ -154,7 +160,7 @@ export default function DetailedPage() {
             </div>
           </div>
 
-          <div className="max-w-[393px] border-2 col-span-full md:mx-auto sm:mx-auto xx:mx-auto lg:col-start-7 lg:col-span-4 bg-white p-8 rounded-2xl shadow-lg  md:mb-0 relative  lg:bottom-20 lg:top-[-80px]  xx:top-8 sm:top-8 md:top-16 pb-0">
+          <div className="max-w-[393px] border-2  col-span-full md:mx-auto sm:mx-auto xx:mx-auto lg:col-start-7 lg:col-span-4 bg-white p-8 rounded-2xl shadow-lg  md:mb-0 relative  lg:bottom-56 lg:top-[-120px]  xx:top-8 sm:top-8 md:top-16 pb-0">
             <div className="flex bg-purp  justify-center items-center relative bottom-20 h-[100px] w-[100px] rounded-full mx-auto">
               <img src={PawHand} alt="" className="h-[60px] w-[58px]" />
             </div>
@@ -165,7 +171,7 @@ export default function DetailedPage() {
               <div className="text-center">
                 {petDetail?.contact?.address.city ||
                   petDetail?.contact?.address.address2 ||
-                  "Address is not defined"}{" "}
+                  "Address is not defined"}
                 {petDetail?.contact?.address.state}
               </div>
               <div className="mt-12 flex items-center pb-4 border-b-[1px] border-slate-400">
@@ -177,7 +183,7 @@ export default function DetailedPage() {
                   <div className="">
                     {petDetail?.contact?.address.city ||
                       petDetail?.contact?.address.address2 ||
-                      "Address is not defined"}{" "}
+                      "Address is not defined"}
                     {petDetail?.contact?.address.state}
                   </div>
                 </div>
@@ -202,7 +208,7 @@ export default function DetailedPage() {
         </div>
       </div>
 
-      <div className="h-[327px] flex justify-center items-center flex-col text-white bg-purp relative bottom-72 xx:hidden sm:hidden md:hidden lg:flex">
+      <div className="h-[327px] flex justify-center items-center flex-col text-white bg-purp relative bottom-64 xx:hidden sm:hidden md:hidden lg:flex">
         <div className="mx-[60px]  ">
           <div className="flex mx-10 items-center gap-5  ">
             <div className="w-[103px] h-[103px] flex items-center">
@@ -245,7 +251,7 @@ export default function DetailedPage() {
             <div className="flex gap-10 my-2">
               <div className="">
                 You may also find more information about the organization on
-                their homepage:{" "}
+                their homepage:
               </div>
               <Link to={petDetail?.url || "/default-url"}>
                 <div className="hover:underline">
@@ -281,7 +287,6 @@ export default function DetailedPage() {
                     <div className="w-[231.2px] h-[400.2px] xsm:mt-10 rounded-lg shadow-xl bg-white ">
                       <div className=" bg-zinc-200 rounded-tl-lg rounded-tr-lg">
                         <Link to={`/details/${item.id}`}>
-                          {" "}
                           <img
                             className="w-[231.2px] rounded-tl-lg rounded-tr-lg object-cover h-[231.20px]"
                             src={item?.photos[0]?.full || alternative}
@@ -324,6 +329,7 @@ export default function DetailedPage() {
           More Pets from {petDetail?.organization_id} Animals In Need
         </div>
       </div>
+      <div className=""></div>
       <div className="flex flex-wrap justify-center text-center relative sm:bottom-90 xx:bottom-80 md:bottom-60 gap-5 lg:bottom-[450px] lg:mb-[-430px] pb-0">
         {organization &&
           organization.slice(11, 15).map((item: organization, i: number) => {
@@ -337,15 +343,16 @@ export default function DetailedPage() {
                           className="w-[231.2px] rounded-tl-lg rounded-tr-lg object-cover h-[231.20px]"
                           src={item?.photos[0]?.full || alternative}
                         />
-                      </Link>
-                    </div>
-                    <div className="">
-                      <div className="flex rounded-tl-3xl rounded-tr-3xl relative h-[9px] bg-white top-[-8px]"></div>
-                      <div className="h-8 ">
-                        <div className=" text-violet-800 text-xl inline-flex">
-                          {item.name.slice(0, 10)}
+
+                        <div className="bg-white">
+                          <div className="flex rounded-tl-3xl rounded-tr-3xl relative h-[9px] bg-white top-[-8px] "></div>
+                          <div className="h-8 cursor-pointer bg-white">
+                            <div className=" text-violet-800 text-xl inline-flex bg-white">
+                              {item.name.slice(0, 10)}
+                            </div>
+                          </div>
                         </div>
-                      </div>
+                      </Link>
                     </div>
                   </div>
                 </div>

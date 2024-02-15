@@ -1,18 +1,19 @@
 import { Link } from "react-router-dom";
-import FooterLogo from "../../assets/images/footerImages/purinaLogo.svg";
-import Logo from "../../assets/images/footerImages/PetfinderLogo.svg";
-import Facebook from "../../assets/images/footerImages/FacebookLogo.svg";
-import Insta from "../../assets/images/footerImages/InstagramLogo.svg";
-import Twitter from "../../assets/images/footerImages/TwitterLogo.svg";
-import Pintrest from "../../assets/images/footerImages/PinterestLogo.svg";
-import YouTube from "../../assets/images/footerImages/YouTubeLogo.svg";
-import arrowWhite from "../../assets/images/footerImages/DownwardArrow.svg";
+
 import {
   navlink_1st,
   navlink_2nd,
   navlink_3rd,
   navlink_4th,
   footLinks,
+  FooterLogo,
+  Logo,
+  Facebook,
+  Insta,
+  Twitter,
+  Pintrest,
+  YouTube,
+  arrowWhite,
 } from "../../type/Type";
 
 const FooterSocialICons = [Twitter, YouTube, Pintrest, Insta, Facebook];
@@ -138,7 +139,6 @@ export default function Footer() {
           <details className="w-full list-image-none bg-prup">
             <summary className="px-[20px] flex  text-white text-sm font-normal border-t border-purple-200 font-['Arial'] uppercase leading-snug py-[16px] cursor-pointer">
               <div className=" font-semibold tracking-wide">
-                {" "}
                 Adopt or Get Involved
               </div>
               <img className="ms-auto" src={arrowWhite} alt="" />
@@ -161,7 +161,6 @@ export default function Footer() {
           <details className="w-full list-image-none bg-prup">
             <summary className="px-[20px] flex  text-white text-sm font-normal border-t border-purple-200 font-['Arial'] uppercase leading-snug py-[16px] cursor-pointer">
               <div className=" font-semibold tracking-wide">
-                {" "}
                 About Dogs & Puppies
               </div>
               <img className="ms-auto" src={arrowWhite} alt="" />
@@ -184,7 +183,6 @@ export default function Footer() {
           <details className="w-full list-image-none bg-prup">
             <summary className="px-[20px] flex  text-white text-sm font-normal border-t border-purple-200 font-['Arial'] uppercase leading-snug py-[16px] cursor-pointer">
               <div className=" font-semibold tracking-wide">
-                {" "}
                 About Cats & Kittens
               </div>
               <img className="ms-auto" src={arrowWhite} alt="" />

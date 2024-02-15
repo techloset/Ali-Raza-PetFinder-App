@@ -31,14 +31,14 @@ export const userSlice = createSlice({
       .addCase(getAnimals.pending, (state) => {
         state.loading = true;
       })
-      .addCase(getAnimals.fulfilled, (state, action: PayloadAction<any>) => {
+      .addCase(getAnimals.fulfilled, (state, action) => {
         state.loading = false;
         state.error = null;
         state.data = action.payload;
       })
-      .addCase(getAnimals.rejected, (state, action: PayloadAction<any>) => {
+      .addCase(getAnimals.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.payload;
+        state.error = action.payload as string |null;
         state.data = [];
       });
   },

@@ -1,9 +1,11 @@
 import { useState } from "react";
-import img from "../../assets/images/LogoPetfinder.svg";
-import icon from "../../assets/images/ForwardIcon.svg";
-import hearticon from "../../assets/images/IconFavoriteHeart.svg";
-import hearticonMobile from "../../assets/images/icon-favoriteHeart-Mobile.svg";
-import toggler from "../../assets/images/togler.svg";
+import {
+  img,
+  icon,
+  hearticon,
+  hearticonMobile,
+  toggler,
+} from "../../type/Type";
 import NavOption from "../navOption/NavOption";
 import { Link } from "react-router-dom";
 export default function Header() {
@@ -15,19 +17,19 @@ export default function Header() {
   return (
     <>
       <div className=" mx-auto h-16 flex justify-around ">
-        <div className="xx:gap-2 flex gap-12">
+        <div className="xx:gap-2 flex gap-8">
           <Link to={"/"}>
             <img src={img} alt="logo" className="cursor-pointer" />
           </Link>
           <div className="flex justify-center items-center">
-            <button className="flex gap-3" type="button" onClick={showNav}>
-              <div className="grid content-center font-medium text-purple hover:scale-105">
+            <button className="flex gap-1" type="button" onClick={showNav}>
+              <div className="grid content-center font-medium  text-purple">
                 All About Pets
               </div>
               <img
-                className={` ease-in-out duration-300  ${
+                className={` ease-in-out duration-1000  ${
                   show ? "rotate-180" : "rotate-0"
-                }   my-auto`}
+                } my-auto py-2`}
                 src={icon}
                 alt="forwardicon"
               />
@@ -42,12 +44,8 @@ export default function Header() {
               className="hover:scale-110 "
             />
           </div>
-          <div className="hover:scale-110 cursor-pointer hover:text-[#6504B5]">
-            Sign Up
-          </div>
-          <div className="hover:scale-110 cursor-pointer hover:text-[#6504B5]">
-            Log In
-          </div>
+          <div className=" cursor-pointer hover:text-[#6504B5]">Sign Up</div>
+          <div className=" cursor-pointer hover:text-[#6504B5]">Log In</div>
         </div>
         <div className="sm:hidden justify-end h-16 xx:inline-flex gap-2 border-[#d2d1d3]  ">
           <div className="">
