@@ -147,5 +147,11 @@ export const footLinks = [
   "Accessibility",
   "About Our Ads",
 ];
+export const navoptions =[
+  "Adopt or Get Involved",
+  "Dogs & Puppies",
+  "Cats & Kittens",
+  "Other Types of Pets",
+];
 
 

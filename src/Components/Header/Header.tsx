@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import img from "../../assets/images/LogoPetfinder.svg";
 import icon from "../../assets/images/ForwardIcon.svg";
 import hearticon from "../../assets/images/IconFavoriteHeart.svg";
@@ -7,7 +7,7 @@ import toggler from "../../assets/images/togler.svg";
 import NavOption from "../navOption/NavOption";
 import { Link } from "react-router-dom";
 export default function Header() {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const showNav = () => {
     setShow((prevShow) => !prevShow);
   };
@@ -24,7 +24,13 @@ export default function Header() {
               <div className="grid content-center font-medium text-purple hover:scale-105">
                 All About Pets
               </div>
-              <img className="my-auto " src={icon} alt="forwardicon" />
+              <img
+                className={` ease-in-out duration-300  ${
+                  show ? "rotate-180" : "rotate-0"
+                }   my-auto`}
+                src={icon}
+                alt="forwardicon"
+              />
             </button>
           </div>
         </div>

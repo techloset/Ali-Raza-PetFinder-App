@@ -20,6 +20,7 @@ export default function Pet() {
     };
     fetchData();
   }, [dispatch]);
+
   if (loading) {
     return (
       <div className="flex justify-center items-center h-[500px]">
@@ -46,7 +47,6 @@ export default function Pet() {
                 <div className="w-[231.2px] h-[301.2px] xsm:mt-10 mt-6 bg-opacity-0 rounded-lg shadow">
                   <div className=" bg-zinc-200 rounded-tl-lg rounded-tr-lg">
                     <Link to={`/details/${item.id}`}>
-                      {" "}
                       <img
                         className="w-[231.2px] rounded-tl-lg rounded-tr-lg object-cover h-[231.20px]"
                         src={item?.photos[0]?.full || alternate}
@@ -72,10 +72,8 @@ export default function Pet() {
               </div>
             );
           })}
-
         <PetCard />
       </div>
-
       <PlaningToAdoptPet />
       <div className="flex justify-center mt-20">
         <div className="w-[506.17px] h-9 text-center text-violet-800 text-3xl font-normal xx:mb-16 leading-9">

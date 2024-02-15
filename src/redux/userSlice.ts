@@ -15,7 +15,6 @@ export const getAnimals = createAsyncThunk("user", async (_, thunkAPI) => {
   try {
     await addAuthorizationHeader();
     const resp = await petFinderInstance.get("/animals");
-    console.log("resp", resp);
     return resp.data.animals;
   } catch (error) {
     console.error("Error fetching users:", error);

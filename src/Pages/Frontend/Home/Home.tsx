@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <div
-        className="h-[410px] grow bg-center bg-cover  sm:bg-cover xx:bg-cover md:bg-auto bg-no-repeat grid border-b-[10px] border-[#6504B5]"
+        className="w-full h-[410px] grow bg-center bg-cover  sm:bg-cover xx:bg-cover md:bg-auto bg-no-repeat grid "
         style={{ backgroundImage: `url(${image})` }}
       >
         <div className="pt-5 jsutify-center ">

@@ -10,7 +10,7 @@ export default function ArticleSection() {
           <div className="">
             <img
               src={dogMainImg}
-              alt=""
+              alt="dog img"
               srcSet=""
               className="rounded-t-2xl cursor-pointer"
             />
@@ -19,7 +19,7 @@ export default function ArticleSection() {
           <div className="h-[100px] flex justify-center  relative bottom-[80px]">
             <img
               src={dogDpImg}
-              alt=""
+              alt="dogsmall image"
               srcSet=""
               className="rounded-full border-[6px] border-white cursor-pointer"
             />
@@ -31,7 +31,7 @@ export default function ArticleSection() {
             Learn more about caring for your new dog
           </div>
           <div className="h-[55px] hover:bg-purp hover:text-white shadow rounded-b-lg hover:rounded-b-lg text-purp flex justify-center items-center relative bottom-12 border-t-2 border-slate-200 cursor-pointer">
-            <div className=""> Read More</div>
+            <div className="">Read More</div>
           </div>
         </div>
 
@@ -39,7 +39,7 @@ export default function ArticleSection() {
           <div className="">
             <img
               src={kittenMainImg}
-              alt=""
+              alt="kitten main image"
               srcSet=""
               className="rounded-t-2xl cursor-pointer"
             />
@@ -48,7 +48,7 @@ export default function ArticleSection() {
           <div className="h-[100px] flex justify-center  relative bottom-[80px]">
             <img
               src={kittenImg}
-              alt=""
+              alt="kitten small image"
               srcSet=""
               className="rounded-full border-[6px] border-white cursor-pointer"
             />
@@ -60,7 +60,7 @@ export default function ArticleSection() {
             Learn more about caring for your new cat
           </div>
           <div className="h-[55px] text-purp hover:bg-purp shadow hover:text-white rounded-b-lg hover:rounded-b-lg  flex justify-center items-center relative bottom-12 border-t-2 border-slate-200 cursor-pointer">
-            <div className=""> Read More</div>
+            <div className="">Read More</div>
           </div>
         </div>
       </div>

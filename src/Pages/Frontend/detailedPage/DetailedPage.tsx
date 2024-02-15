@@ -51,10 +51,15 @@ export default function DetailedPage() {
   return (
     <>
       <div className="">
+        {loading && (
+          <div className="flex justify-center items-center h-[500px]">
+            <div className="animate-spin rounded-full h-20 w-20 border-t-4 border-purp border-solid"></div>
+          </div>
+        )}
         <div className="h-[810px] bg-slate-200 ">
           <div className="h-[486px] xx:h-[340px] w-auto flex justify-center bg-black">
             <img
-              src={petDetail?.photos?.[0]?.full || alternative}
+              src={(!loading && petDetail?.photos?.[0]?.full) || alternative}
               alt="dog image"
               className="h-full"
             />
@@ -253,9 +258,15 @@ export default function DetailedPage() {
       </div>
 
       <div className="bg-violet-800 pt-8 sm:mt-40 relative sm:bottom-72 xx:bottom-72 lg:bottom-[450px]">
+        {loading && (
+          <div className="flex justify-center items-center h-[500px]">
+            <div className="animate-spin rounded-full h-20 w-20 border-t-4 border-purp border-solid"></div>
+          </div>
+        )}
         <div className="flex justify-center flex-col items-center">
           <div className="max-w-[506.17px] h-9 text-center text-white  text-3xl font-normal xx:mb-3 sm:mb-6 md:mb-0 leading-9">
-            {petDetail?.organization_id || "Organization"} Happy Tails
+            {(!loading && petDetail?.organization_id) || "Organization"} Happy
+            Tails
           </div>
           <div className="max-w-[506.17px] h-9 text-center text-white  underline p-1 font-normal xx:mb-6 sm:mb-6 leading-9">
             View Pet Adoption Stories
