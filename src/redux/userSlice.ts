@@ -4,7 +4,7 @@ import {
   addAuthorizationHeader,
   petFinderInstance,
 } from "../utilities/axiosInstance";
-import { CounterState } from "../type/Type";
+import { CounterState } from "../type/type";
 
 const initialState: CounterState = {
   data: [],
@@ -38,7 +38,7 @@ export const userSlice = createSlice({
       })
       .addCase(getAnimals.rejected, (state, action) => {
         state.loading = false;
-        state.error = action.payload as string |null;
+        state.error = action.payload as string | null;
         state.data = [];
       });
   },

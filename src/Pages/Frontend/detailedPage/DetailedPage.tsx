@@ -14,7 +14,7 @@ import {
   PhoneIcon,
   AlertImg,
   feedback,
-} from "../../../type/Type";
+} from "../../../type/type";
 
 export default function DetailedPage() {
   const { animalId } = useParams<{ animalId: string }>();

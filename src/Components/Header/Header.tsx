@@ -5,7 +5,7 @@ import {
   hearticon,
   hearticonMobile,
   toggler,
-} from "../../type/Type";
+} from "../../type/type";
 import NavOption from "../navOption/NavOption";
 import { Link } from "react-router-dom";
 export default function Header() {

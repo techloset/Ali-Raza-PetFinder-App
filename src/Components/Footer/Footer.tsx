@@ -14,7 +14,7 @@ import {
   Pintrest,
   YouTube,
   arrowWhite,
-} from "../../type/Type";
+} from "../../type/type";
 
 const FooterSocialICons = [Twitter, YouTube, Pintrest, Insta, Facebook];
 export default function Footer() {

@@ -9,7 +9,7 @@ import {
   Response,
   alternate,
   iconFavorite2,
-} from "../../../type/Type";
+} from "../../../type/type";
 
 export default function Pet() {
   const dispatch = useAppDispatch();

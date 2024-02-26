@@ -8,7 +8,7 @@ import {
   addAuthorizationHeader,
   petFinderInstance,
 } from "../utilities/axiosInstance";
-import { GetOrganizationState } from "../type/Type";
+import { GetOrganizationState } from "../type/type";
 
 const initialState: GetOrganizationState = {
   organization: [],
@@ -41,22 +41,16 @@ export const OrganizaionSlice = createSlice({
       .addCase(GetOrganization.pending, (state) => {
         state.loading = true;
       })
-      .addCase(
-        GetOrganization.fulfilled,
-        (state, action) => {
-          state.loading = false;
-          state.error = null;
-          state.organization = action.payload;
-        }
-      )
-      .addCase(
-        GetOrganization.rejected,
-        (state, action) => {
-          state.loading = false;
-          state.error = action.payload as string |null;
-          state.organization = [];
-        }
-      );
+      .addCase(GetOrganization.fulfilled, (state, action) => {
+        state.loading = false;
+        state.error = null;
+        state.organization = action.payload;
+      })
+      .addCase(GetOrganization.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.payload as string | null;
+        state.organization = [];
+      });
   },
 });
 

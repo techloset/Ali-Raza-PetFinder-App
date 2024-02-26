@@ -1,4 +1,4 @@
-import { navoptions } from "../../type/Type";
+import { navoptions } from "../../type/type";
 
 export default function NavOption() {
   return (

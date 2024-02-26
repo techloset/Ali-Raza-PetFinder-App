@@ -8,7 +8,7 @@ import {
   img3,
   img4,
   searchIcon,
-} from "../../../type/Type";
+} from "../../../type/type";
 export default function Home() {
   return (
     <>
