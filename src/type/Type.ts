@@ -15,10 +15,10 @@ import LocationIcon from "../assets/images/detailedPageImg/icon-location.svg";
 import PhoneIcon from "../assets/images/detailedPageImg/icon-phone.svg";
 import alternative from "../assets/images/petCardImages/IconLogofaceColorGray.svg";
 import AlertImg from "../assets/images/detailedPageImg/icon-alert.svg";
-import newAdopt from "../assets/images/heroIcons/IconSheltersRescues.svg"
-import plandogimg from "../assets/images/heroIcons/Dog.svg"
-import planheartimg from "../assets/images/heroIcons/Health.svg"
-import feedback from "../assets/images/Feedback.png"
+import newAdopt from "../assets/images/heroIcons/IconSheltersRescues.svg";
+import plandogimg from "../assets/images/heroIcons/Dog.svg";
+import planheartimg from "../assets/images/heroIcons/Health.svg";
+import feedback from "../assets/images/Feedback.png";
 import dogMainImg from "../assets/images/articalSectionImg/ArticalMainImage.png";
 import dogDpImg from "../assets/images/articalSectionImg/DogimageSmall.png";
 import kittenMainImg from "../assets/images/articalSectionImg/kittenMainImage.png";
@@ -35,7 +35,44 @@ import Pintrest from "../assets/images/footerImages/PinterestLogo.svg";
 import YouTube from "../assets/images/footerImages/YouTubeLogo.svg";
 import arrowWhite from "../assets/images/footerImages/DownwardArrow.svg";
 
-export {img, icon, hearticon, hearticonMobile, toggler,image,img1,img2,img3,img4,searchIcon, FaviorteHeart,PawHand,LocationIcon,PhoneIcon,alternative,AlertImg, newAdopt,plandogimg,planheartimg,feedback,dogMainImg,dogDpImg,kittenImg,kittenMainImg,iconFavorite2,alternate,Forwardicon,FooterLogo,Logo,Facebook,Insta,Twitter,Pintrest,YouTube,arrowWhite} 
+export {
+  img,
+  icon,
+  hearticon,
+  hearticonMobile,
+  toggler,
+  image,
+  img1,
+  img2,
+  img3,
+  img4,
+  searchIcon,
+  FaviorteHeart,
+  PawHand,
+  LocationIcon,
+  PhoneIcon,
+  alternative,
+  AlertImg,
+  newAdopt,
+  plandogimg,
+  planheartimg,
+  feedback,
+  dogMainImg,
+  dogDpImg,
+  kittenImg,
+  kittenMainImg,
+  iconFavorite2,
+  alternate,
+  Forwardicon,
+  FooterLogo,
+  Logo,
+  Facebook,
+  Insta,
+  Twitter,
+  Pintrest,
+  YouTube,
+  arrowWhite,
+};
 
 export type Photos = {
   small: string;
@@ -89,21 +126,20 @@ export interface GetPetState {
   animal: animal | null;
   loading: boolean;
   error: string | null;
-};
+}
 export type organization = {
-  organization_id: string,
-  id: string,
-  name: string,
-  photos: Photos[],
-  organization: string,
-  description: string,
+  organization_id: string;
+  id: string;
+  name: string;
+  photos: Photos[];
+  organization: string;
+  description: string;
 };
 export interface GetOrganizationState {
-
-  organization: organization[] | null,
-  loading: boolean,
-  error: string | null
-};
+  organization: organization[] | null;
+  loading: boolean;
+  error: string | null;
+}
 
 export interface Response {
   name: string;
@@ -115,10 +151,10 @@ export interface Response {
 }
 
 export interface CounterState {
-  data:  petData[] | null,
-  loading: boolean,
-  error: string | null,
-};
+  data: petData[] | null;
+  loading: boolean;
+  error: string | null;
+}
 export interface petData {
   age: string;
   gender: string;
@@ -135,11 +171,10 @@ export interface petData {
   breeds: Breeds[] | [];
   organization_id: string;
   url: string;
-  // 
   image_url: string;
   id: number;
   animalId: [];
-};
+}
 export const navlink_1st = [
   "FAQs",
   "Mobile App Download",
@@ -185,11 +220,9 @@ export const footLinks = [
   "Accessibility",
   "About Our Ads",
 ];
-export const navoptions =[
+export const navoptions = [
   "Adopt or Get Involved",
   "Dogs & Puppies",
   "Cats & Kittens",
   "Other Types of Pets",
 ];
-
-

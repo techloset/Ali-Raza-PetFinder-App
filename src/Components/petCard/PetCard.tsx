@@ -1,4 +1,5 @@
-import iconStrokedPaw from "../../../assets/images/petCardImages/IconStrokedPaw.svg";
+import iconStrokedPaw from "../../assets/images/petCardImages/IconStrokedPaw.svg";
+
 export default function PetCard() {
   return (
     <>

@@ -65,7 +65,7 @@ export default function DetailedPage() {
             <img
               src={(!loading && petDetail?.photos?.[0]?.full) || alternative}
               alt="dog image"
-              className="h-full bg-[#E6E4E9]"
+              className="h-full bg-tahiti"
             />
           </div>
           <div className="relative bottom-[75px] xx:bottom-4  flex flex-col-reverse justify-end items-end">

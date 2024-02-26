@@ -219,7 +219,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="h-auto md:h-[130px] text-center items-center text-white bg-[#2e0152] flex-wrap xx:h-[150px] lg:h-[70px]">
+      <div className="h-auto md:h-[130px] text-center items-center text-white bg-bermuda flex-wrap xx:h-[150px] lg:h-[70px]">
         <div className="h-full flex justify-evenly items-center xx:grid sm:grid md:grid  lg:flex ">
           <div className="flex items-center justify-center gap-24 xx:gap-4 sm:gap-2 sm:mb-4 xx:grid sm:grid md:flex  xx:order-2 lg:order-1">
             <div className="sm:mt-4 md:mt-0 mr-8">©2023 Petfinder.com</div>

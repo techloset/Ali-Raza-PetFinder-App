@@ -1,7 +1,9 @@
 import Routes from "../src/pages/Routes";
-
 function App() {
-  return <Routes />;
+  return (
+    <>
+      <Routes />;
+    </>
+  );
 }
-
 export default App;

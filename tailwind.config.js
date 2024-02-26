@@ -32,10 +32,10 @@ module.exports = {
         'purple': '#3f3cbb',
         'midnight': '#121063',
         'metal': '#565584',
-        'tahiti': '#3ab7bf',
+        'tahiti': '#E6E4E9',
         'silver': '#ecebff',
-        'bubble-gum': '#ff77e9',
-        'bermuda': '#78dcca',
+        'bubble-gum': '#d2d1d3',
+        'bermuda': '#2e0152',
       },
       fontFamily: {
         arial : ['Arial']

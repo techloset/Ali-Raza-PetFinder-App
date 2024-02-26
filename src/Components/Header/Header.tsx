@@ -37,17 +37,17 @@ export default function Header() {
           </div>
         </div>
         <div className="xx:hidden md:flex flex items-center justify-center gap-7 h-16 font-arial text-base font-normal ">
-          <div className="border-r-4 h-[64px]  pr-6 border-[#d2d1d3] cursor-pointer">
+          <div className="border-r-4 h-[64px]  pr-6 border-bubble-gum cursor-pointer">
             <img
               src={hearticon}
               alt="heart Icon"
               className="hover:scale-110 "
             />
           </div>
-          <div className=" cursor-pointer hover:text-[#6504B5]">Sign Up</div>
-          <div className=" cursor-pointer hover:text-[#6504B5]">Log In</div>
+          <div className=" cursor-pointer hover:text-purp">Sign Up</div>
+          <div className=" cursor-pointer hover:text-purp">Log In</div>
         </div>
-        <div className="sm:hidden justify-end h-16 xx:inline-flex gap-2 border-[#d2d1d3]  ">
+        <div className="sm:hidden justify-end h-16 xx:inline-flex gap-2 border-bubble-gum">
           <div className="">
             <img src={hearticonMobile} alt="heart Icon" />
           </div>
