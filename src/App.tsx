@@ -2,7 +2,7 @@ import Routes from "../src/pages/Routes";
 function App() {
   return (
     <>
-      <Routes />;
+      <Routes />
     </>
   );
 }
