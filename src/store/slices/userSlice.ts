@@ -1,10 +1,9 @@
 import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import axios from "axios";
 import {
   addAuthorizationHeader,
   petFinderInstance,
-} from "../utilities/axiosInstance";
-import { CounterState } from "../type/type";
+} from "../../utilities/axiosInstance";
+import { CounterState } from "../../type/type";
 
 const initialState: CounterState = {
   data: [],
@@ -17,8 +16,11 @@ export const getAnimals = createAsyncThunk("user", async (_, thunkAPI) => {
     const resp = await petFinderInstance.get("/animals");
     return resp.data.animals;
   } catch (error) {
-    console.error("Error fetching users:", error);
-    throw error;
+    if (error instanceof Error) {
+      throw new Error(error?.message || "Error while fetching data from API");
+    } else {
+      throw new Error("Unknown error occurred");
+    }
   }
 });
 

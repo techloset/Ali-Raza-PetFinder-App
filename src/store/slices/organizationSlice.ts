@@ -7,8 +7,8 @@ import {
 import {
   addAuthorizationHeader,
   petFinderInstance,
-} from "../utilities/axiosInstance";
-import { GetOrganizationState } from "../type/type";
+} from "../../utilities/axiosInstance";
+import { GetOrganizationState } from "../../type/type";
 
 const initialState: GetOrganizationState = {
   organization: [],
@@ -27,7 +27,12 @@ export const GetOrganization = createAsyncThunk(
       const result = resp.data.animals;
       return result;
     } catch (error) {
-      console.log("Error fetching organization_id:", error);
+      console.error("Error: ", error);
+      if (error instanceof Error) {
+        throw new Error(error?.message || "Error while fetching data from API");
+      } else {
+        throw new Error("Unknown error occurred");
+      }
     }
   }
 );

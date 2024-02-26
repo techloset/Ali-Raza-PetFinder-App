@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../../../redux/hooks";
-import { getAnimal } from "../../../redux/animalSlice";
-import PetCard from "../petCard/PetCard";
-import { GetOrganization } from "../../../redux/organizationSlice";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { getAnimal } from "../../store/slices/animalSlice";
+import PetCard from "../../components/petCard/PetCard";
+import { GetOrganization } from "../../store/slices/organizationSlice";
 import {
   alternative,
   organization,
@@ -14,7 +14,7 @@ import {
   PhoneIcon,
   AlertImg,
   feedback,
-} from "../../../type/type";
+} from "../../type/type";
 
 export default function DetailedPage() {
   const { animalId } = useParams<{ animalId: string }>();

@@ -3,7 +3,7 @@ import {
   dogMainImg,
   kittenImg,
   kittenMainImg,
-} from "../../../type/type";
+} from "../../type/type";
 
 export default function ArticleSection() {
   return (

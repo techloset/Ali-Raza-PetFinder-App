@@ -29,7 +29,7 @@ export default function Footer() {
 
         <div className="Footer bg-purp  px-3 flex md:mx-4 lg:mx-10 xx:justify-center xx:items-center sm:justify-center sm:items-center  flex-col">
           <div className="mx-auto lg:w-[1267px]  footerbug:max-w-[980px] footerbug2:md:max-w[900px]">
-            <div className="bg-[#6504b5] flex lg:justify-start">
+            <div className="bg-purp flex lg:justify-start">
               <Link
                 to={"/"}
                 className="flex xx:justify-center xx:mt-10 sm:mt-8 sm:justify-center lg:mb-[30px] lg:justify-center cursor-pointer"

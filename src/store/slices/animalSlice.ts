@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import { petFinderInstance } from "../utilities/axiosInstance";
-import { GetPetState } from "../type/type";
+import { petFinderInstance } from "../../utilities/axiosInstance";
+import { GetPetState } from "../../type/type";
 
 const initialState: GetPetState = {
   animal: null,
@@ -17,7 +17,11 @@ export const getAnimal = createAsyncThunk(
       const result = resp.data.animal;
       return result;
     } catch (error) {
-      console.log("error", error);
+      if (error instanceof Error) {
+        throw new Error(error?.message || "Error while fetching data from API");
+      } else {
+        throw new Error("Unknown error occurred");
+      }
     }
   }
 );
