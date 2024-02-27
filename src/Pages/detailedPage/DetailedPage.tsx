@@ -7,15 +7,14 @@ import PetCard from "../../components/petCard/PetCard";
 import { GetOrganization } from "../../store/slices/organizationSlice";
 import {
   alternative,
-  organization,
   FaviorteHeart,
   PawHand,
   LocationIcon,
   PhoneIcon,
   AlertImg,
   feedback,
-} from "../../type/type";
-
+} from "../../lib/constants/Constants";
+import { organization } from "../../type/type";
 export default function DetailedPage() {
   const { animalId } = useParams<{ animalId: string }>();
   const [loading, setLoading] = useState(true);

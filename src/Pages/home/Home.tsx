@@ -1,5 +1,3 @@
-import AvailPetsAdopt from "../../components/availablePetsForAdoption/AvailablePetsForAdoption";
-import ArticleSection from "../../components/articleSection/ArticleSection";
 import {
   feedback,
   image,
@@ -8,7 +6,9 @@ import {
   img3,
   img4,
   searchIcon,
-} from "../../type/type";
+  ArticleSection,
+  AvailPetsAdopt,
+} from "../../lib/constants/Constants";
 export default function Home() {
   return (
     <>

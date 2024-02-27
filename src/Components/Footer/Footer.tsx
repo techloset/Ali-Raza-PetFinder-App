@@ -1,11 +1,6 @@
 import { Link } from "react-router-dom";
 
 import {
-  navlink_1st,
-  navlink_2nd,
-  navlink_3rd,
-  navlink_4th,
-  footLinks,
   FooterLogo,
   Logo,
   Facebook,
@@ -14,8 +9,12 @@ import {
   Pintrest,
   YouTube,
   arrowWhite,
-} from "../../type/type";
-
+  navlink_1st,
+  navlink_2nd,
+  navlink_3rd,
+  navlink_4th,
+  footLinks,
+} from "../../lib/constants/Constants";
 const FooterSocialICons = [Twitter, YouTube, Pintrest, Insta, Facebook];
 export default function Footer() {
   return (

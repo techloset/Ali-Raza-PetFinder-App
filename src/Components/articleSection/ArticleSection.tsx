@@ -3,7 +3,7 @@ import {
   dogMainImg,
   kittenImg,
   kittenMainImg,
-} from "../../type/type";
+} from "../../lib/constants/Constants";
 
 export default function ArticleSection() {
   return (

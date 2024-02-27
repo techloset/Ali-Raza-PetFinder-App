@@ -1,4 +1,8 @@
-import { newAdopt, plandogimg, planheartimg } from "../../type/type";
+import {
+  newAdopt,
+  plandogimg,
+  planheartimg,
+} from "../../lib/constants/Constants";
 export default function PlaningToAdoptPet() {
   return (
     <>

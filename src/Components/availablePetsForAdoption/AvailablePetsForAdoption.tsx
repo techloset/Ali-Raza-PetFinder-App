@@ -6,10 +6,10 @@ import { getAnimals } from "../../store/slices/userSlice";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import {
   Forwardicon,
-  Response,
   alternate,
   iconFavorite2,
-} from "../../type/type";
+} from "../../lib/constants/Constants";
+import { Response } from "../../type/type";
 
 export default function Pet() {
   const dispatch = useAppDispatch();
