@@ -18,36 +18,33 @@ function HomeSection() {
         <div className="pt-5 jsutify-center ">
           <div className="flex lg:w-[808px] 2xl:h-[60px] lg:h-[70px] md:h-[60px] sm:h-[60px] xx:h-[50px] md:w- [900px] sm:w-[450px] xx:w-[270px] bg-white rounded-lg  h-[60px] mx-auto ">
             <input
-              className="w-[474px] h-ful rounded-l-lg flex   bg-white border-purp rounded-md xx:border-none  sm:border-block lg:border-block py-2 pl-3 pr-3  sm:text-sm  hover:border-b-4 hover:border-t-2 outline-none hover:border-x placeholder:text-lg"
+              className="w-[874px] h-ful rounded-l-lg flex   bg-white border-purp rounded-md xx:border-none  sm:border-block lg:border-block py-2 pl-3 pr-3  sm:text-sm  hover:border-b-4 hover:border-t-2 outline-none hover:border-x placeholder:text-lg"
               placeholder="Search Terrier, Kitten, etc..."
               type="search"
               name="search"
             />
-            <div className="bg-slate-300 w-[1.5px] h-[35px] mt-3 flex items-center xx:hidden sm:hidden md:hidden lg:flex"></div>
-            <input
-              className="w-[374px] h-ful  rounded-l-lg flex  bg-white  rounded-md py-2 pl-3 pr-3  sm:text-sm border-purp hover:border-b-4 hover:border-t-2 outline-none hover:border-x placeholder:text-lg sm:hidden xx:hidden md:hidden lg:flex"
-              placeholder="Enter City, State, Zip"
-              type="search"
-              name="search"
-            />
+
             <div className="w-[50px]  hover:border-2 hover:rounded-md hover:border-purp hover:border-w-full flex mx-2 justify-center hover:h-[45px] xx:hover:h-[30px] sm:hover:h-[40px] md:hover:h-[40px] lg:hover:h-[45px] xx:border-w-[50px] sm:border-w-[50px] hover:my-auto xx:border-w-20 ">
               <img
                 src={searchIcon}
                 alt=""
                 srcSet=""
-                className="w-[32px] h-full flex justify-center "
+                className="w-[36px] h-full flex justify-center "
               />
             </div>
           </div>
         </div>
-        <div className="w-auto mt-24">
+        <div className="w-auto mt-32">
           <div className="text-center flex justify-center">
-            <h1 className="text-4xl h-[54px]  text-white font-bold font-arial  xx:pb-32">
+            <div
+              className=" h-[54px]  text-white font-bold font-arial  xx:pb-32 md:mb-2"
+              style={{ fontSize: 42 }}
+            >
               Find your new best friend
-            </h1>
+            </div>
           </div>
           <div className="text-center flex justify-center">
-            <p className="text-xl  h-[32px]  text-white font font-arial ">
+            <p className="text-lg  h-[32px]  text-white font-14 font-arial ">
               Browse pets from our network of over 11,500 shelters and rescues.
             </p>
           </div>

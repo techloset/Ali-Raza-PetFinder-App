@@ -37,7 +37,7 @@ export default function Header() {
           </div>
         </div>
         <div className="xx:hidden md:flex flex items-center justify-center gap-7 h-16 font-arial text-base font-normal ">
-          <div className="border-r-4 h-[64px]  pr-6 border-bubble-gum cursor-pointer">
+          <div className="border-r-2 h-[64px]  pr-6 border-bubble-gum cursor-pointer">
             <img
               src={hearticon}
               alt="heart Icon"
