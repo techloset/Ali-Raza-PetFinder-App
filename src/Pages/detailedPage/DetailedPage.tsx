@@ -282,12 +282,12 @@ export default function DetailedPage() {
             organization.slice(17, 20).map((item: organization, i: number) => {
               return (
                 <>
-                  <div key={i} className="w-auto mx-2 h-[451.2px] mb-4 ">
-                    <div className="w-[231.2px] h-[400.2px] xsm:mt-10 rounded-lg shadow-xl bg-white ">
+                  <div key={i} className="w-auto mx-2 h-[471.2px] mb-4 ">
+                    <div className="w-[375px] h-[420.2px] xsm:mt-10 rounded-lg shadow-xl bg-white ">
                       <div className=" bg-zinc-200 rounded-tl-lg rounded-tr-lg">
                         <Link to={`/details/${item.id}`}>
                           <img
-                            className="w-[231.2px] rounded-tl-lg rounded-tr-lg object-cover h-[231.20px]"
+                            className="w-[375px] rounded-tl-lg rounded-tr-lg object-cover h-[231.20px]"
                             src={item?.photos[0]?.full || alternative}
                           />
                         </Link>
@@ -295,20 +295,21 @@ export default function DetailedPage() {
                       <div className=" top-[-10px] h-[70px] bg-white text-purp block">
                         <div className="flex rounded-tl-3xl rounded-tr-3xl relative h-[9px] bg-white top-[-8px]"></div>
                         <div className="h-8 bg-white">
-                          <div className="  text-xl inline-flex bg-white">
-                            {item?.name?.slice(0, 13)}
+                          <div className="  text-xl inline-flex bg-white text-slate-800 mb-2">
+                            {item?.name?.slice(0, 20)}
                           </div>
                           <br />
-                          <div className="inline-flex h-14">
-                            {item?.description?.slice(0, 50) ||
+                          <div className="inline-flex h-14 text-slate-800 mx-10 mb-5">
+                            {item?.description?.slice(0, 99) ||
                               "Description is not Avilable"}
+                            b
                           </div>
-                          <hr className="border border-slate-200 w-full my-5 " />
-                          <div className="   inline-flex ">
+                          <hr className="border border-slate-200 w-full mt-5 " />
+                          <div className="inline-flex mt-3">
                             <Link
                               to={`/details/${item.id}`}
                               type="button"
-                              className="bg-white w-full"
+                              className="bg-white w-full text-slate-800 font-14"
                             >
                               Read More
                             </Link>
