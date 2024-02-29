@@ -33,15 +33,15 @@ export default function Pet() {
 
   return (
     <>
-      <div className="flex justify-center mt-28">
-        <div className="w-[506.17px] h-9 text-center text-violet-800 text-3xl font-normal xx:mb-16 sm:mb-6 leading-9">
+      <div className="flex justify-center items-center sm:mt-0">
+        <div className="w-[506.17px] h-9 text-center text-violet-800 text-3xl font-normal xx:mb-16  sm:mb-6 sm:mt-6 leading-9">
           Pets Available for Adoption Nearby
         </div>
-        <div className="xx:mt-6 xx:w-[28px] w-[18px] h-[18px] mt-3.5 inline-flex  mb-6">
+        <div className="xx:mt-6 xx:w-[28px] w-[18px] h-[18px] mt-3.5 inline-flex sm:mb-0 xx:mb-12 xx:mr-6">
           <img src={Forwardicon} alt="" />
         </div>
       </div>
-      <div className="flex flex-wrap justify-center text-center">
+      <div className="flex flex-wrap justify-center text-center ">
         {petData &&
           petData.slice(16, 20).map((item: Response, i: number) => {
             return (

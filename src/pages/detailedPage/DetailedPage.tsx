@@ -59,7 +59,7 @@ export default function DetailedPage() {
             <div className="animate-spin rounded-full h-20 w-20 border-t-4 border-purp border-solid"></div>
           </div>
         )}
-        <div className="h-[710px] bg-slate-200 ">
+        <div className="h-[770px] bg-slate-200 ">
           <div className="h-[486px] xx:h-[340px] w-auto flex justify-center bg-black">
             <img
               src={(!loading && petDetail?.photos?.[0]?.full) || alternative}
@@ -71,8 +71,8 @@ export default function DetailedPage() {
             <img src={feedback} className="w-[25px] h-[75px] z-10" />
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2  lg:grid-cols-10 gap-8 w-full max-w-5xl mx-auto xx:px-0 px-4 md:px-0 relative xx:bottom-96 sm:bottom-56 md:bottom-64 lg:bottom-44 xX:justify-evenly">
-          <div className="col-span-full lg:col-span-6 bg-white xx:mt-12    xx:rounded-none rounded-xl shadow-lg mb-8  md:mb-0 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:mb-12  lg:grid-cols-10 gap-8 w-full max-w-7xl mx-auto xx:px-0 px-4 md:px-0 relative xx:bottom-96 sm:bottom-56 md:bottom-64 lg:bottom-44 xx:justify-evenly">
+          <div className="col-span-full lg:col-span-6 bg-white xx:mt-12 xx:rounded-none rounded-xl shadow-lg mb-8  md:mb-0 ">
             <div className="">
               <div className="flex text-4xl font-400 font-normal xx:px-0 px-7 py-6 xx:justify-center">
                 {petDetail?.name || "Name is not Given"}
@@ -131,10 +131,10 @@ export default function DetailedPage() {
             </div>
           </div>
 
-          <div className=" max-w-[393px] md:max-h-[293px] xx:max-h-[293px] xx:mx-4 max-h-[293px] mx-auto md:sm-auto lg:max-h-[293px] sm:flex sm:content-center pb-0 col-span-full  lg:col-span-4  text-white p-8 rounded-lg shadow-lg  md:mb-0 bg-purp">
+          <div className=" max-w-[423px] md:max-h-[293px] xx:max-h-[293px] xx:mx-4 max-h-[293px] mx-auto md:sm-auto lg:max-h-[293px] sm:flex sm:content-center pb-0 col-span-full  lg:col-span-4  text-white p-8 rounded-lg shadow-lg  md:mb-0 bg-purp sm:ml-62">
             <div className=" pb-0 mb-0">
-              <div className="text-xl font-normal max-mt-6 text-center flex flex-wrap">
-                Considering {petDetail?.name.slice(0, 7)} for adoption?
+              <div className="text-xl font-normal max-mt-6 text-center flex ">
+                Considering {petDetail?.name.slice(0, 9)} for adoption?
               </div>
               <div className="rounded-3xl  text-center mt-4 mb-4 bg-white border-2 text-purp hover:bg-purp hover:text-white hover:border-2 hover:bordre-white">
                 <button
@@ -150,7 +150,7 @@ export default function DetailedPage() {
               <hr className="max-w-[410px] mt-6 border-1 border-black mx-[-32px]" />
               <div className="md:h-[67px] xx:h-[64px] sm:h-[55px] flex justify-around items-center sticky">
                 <div className="text-center cursor-pointer">SPONSOR</div>
-                <div className="w-[1px] md:h-[65px] xx:h-[55px] relative xx:bottom-1 bg-black"></div>
+                <div className="w-[1px] md:h-[68px] sm:h-[56px] xx:h-[63px] xx:mt-2 relative xx:bottom-1 bg-black"></div>
                 <div className="flex xx:gap-1 md:gap-2 justify-center cursor-pointer">
                   <img src={FaviorteHeart} alt="" />
                   FAVORITE
@@ -159,7 +159,7 @@ export default function DetailedPage() {
             </div>
           </div>
 
-          <div className="max-w-[393px] border-2  col-span-full md:mx-auto sm:mx-auto xx:mx-auto lg:col-start-7 lg:col-span-4 bg-white p-8 rounded-2xl shadow md:mb-0 relative  lg:bottom-56 lg:top-[-120px]  xx:top-8 sm:top-8 md:top-16 pb-0">
+          <div className="max-w-[393px] border-2  col-span-full md:mx-auto sm:mx-auto xx:mx-auto lg:col-start-7 lg:col-span-4 bg-white p-8 rounded-2xl shadow md:mb-0 relative  lg:bottom-44 lg:top-[-90px]  xx:top-8 sm:top-8 md:top-16 pb-0">
             <div className="flex bg-purp  justify-center items-center relative bottom-20 h-[100px] w-[100px] rounded-full mx-auto">
               <img src={PawHand} alt="" className="h-[60px] w-[58px]" />
             </div>
