@@ -327,37 +327,7 @@ export default function DetailedPage() {
         </div>
       </div>
       <div className=""></div>
-      <div className="flex overflow-x-auto no-scrollbar justify-center text-center relative sm:bottom-90 xx:bottom-56 md:bottom-60 gap-5 lg:bottom-[450px] lg:mb-[-430px] pb-0 ">
-        {organization &&
-          organization.slice(0, 20).map((item: organization, i: number) => {
-            return (
-              <>
-                <div key={i} className="w-auto mx-2 h-[301.2px] mb-4 ">
-                  <div className="w-[231.2px] h-[301.2px] xx:mt-10 mt-6 bg-opacity-0 rounded-lg shadow">
-                    <div className=" bg-zinc-200 rounded-tl-lg rounded-tr-lg">
-                      <Link to={`/details/${item.id}`}>
-                        <img
-                          className="w-[231.2px] rounded-tl-lg rounded-tr-lg object-cover h-[231.20px]"
-                          src={item?.photos[0]?.full || alternative}
-                        />
-
-                        <div className="bg-white">
-                          <div className="flex rounded-tl-3xl rounded-tr-3xl relative h-[9px] bg-white top-[-8px] "></div>
-                          <div className="h-8 cursor-pointer bg-white">
-                            <div className=" text-violet-800 text-xl inline-flex bg-white">
-                              {item.name.slice(0, 10)}
-                            </div>
-                          </div>
-                        </div>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </>
-            );
-          })}
-        <PetCard />
-      </div>
+      
     </>
   );
 }
