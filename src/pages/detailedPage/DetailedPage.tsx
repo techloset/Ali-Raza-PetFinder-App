@@ -50,7 +50,6 @@ export default function DetailedPage() {
       </div>
     );
   }
-
   return (
     <>
       <div className="">
@@ -130,7 +129,6 @@ export default function DetailedPage() {
               </div>
             </div>
           </div>
-
           <div className=" max-w-[423px] md:max-h-[293px] xx:max-h-[293px] xx:mx-4 max-h-[293px] mx-auto md:sm-auto lg:max-h-[293px] sm:flex sm:content-center pb-0 col-span-full  lg:col-span-4  text-white p-8 rounded-lg shadow-lg  md:mb-0 bg-purp sm:ml-62">
             <div className=" pb-0 mb-0">
               <div className="text-xl font-normal max-mt-6 text-center flex ">
@@ -158,7 +156,6 @@ export default function DetailedPage() {
               </div>
             </div>
           </div>
-
           <div className="max-w-[393px] border-2  col-span-full md:mx-auto sm:mx-auto xx:mx-auto lg:col-start-7 lg:col-span-4 bg-white p-8 rounded-2xl shadow md:mb-0 relative  lg:bottom-44 lg:top-[-90px]  xx:top-8 sm:top-8 md:top-16 pb-0">
             <div className="flex bg-purp  justify-center items-center relative bottom-20 h-[100px] w-[100px] rounded-full mx-auto">
               <img src={PawHand} alt="" className="h-[60px] w-[58px]" />
