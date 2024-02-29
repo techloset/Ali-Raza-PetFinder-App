@@ -330,12 +330,12 @@ export default function DetailedPage() {
         </div>
       </div>
       <div className=""></div>
-      <div className="flex flex-wrap justify-center text-center relative sm:bottom-90 xx:bottom-80 md:bottom-60 gap-5 lg:bottom-[450px] lg:mb-[-430px] pb-0">
+      <div className="flex overflow-x-auto no-scrollbar justify-center text-center relative sm:bottom-90 xx:bottom-56 md:bottom-60 gap-5 lg:bottom-[450px] lg:mb-[-430px] pb-0 ">
         {organization &&
-          organization.slice(11, 15).map((item: organization, i: number) => {
+          organization.slice(0, 20).map((item: organization, i: number) => {
             return (
               <>
-                <div key={i} className="w-auto mx-2 h-[301.2px] mb-4">
+                <div key={i} className="w-auto mx-2 h-[301.2px] mb-4 ">
                   <div className="w-[231.2px] h-[301.2px] xx:mt-10 mt-6 bg-opacity-0 rounded-lg shadow">
                     <div className=" bg-zinc-200 rounded-tl-lg rounded-tr-lg">
                       <Link to={`/details/${item.id}`}>
