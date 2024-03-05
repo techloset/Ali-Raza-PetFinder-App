@@ -23,7 +23,7 @@ export default function Header() {
           </Link>
           <div className="flex justify-center items-center">
             <button className="flex gap-1" type="button" onClick={showNav}>
-              <div className="grid content-center font-medium  text-purple">
+              <div className="grid content-center font-medium  text-[#6504B5]">
                 All About Pets
               </div>
               <img
@@ -38,14 +38,14 @@ export default function Header() {
         </div>
         <div className="xx:hidden md:flex flex items-center justify-center gap-7 h-16 font-arial text-base font-normal ">
           <div className="border-r-2 h-[64px]  pr-6 border-bubble-gum cursor-pointer">
-            <img
-              src={hearticon}
-              alt="heart Icon"
-              className="hover:scale-110 "
-            />
+            <img src={hearticon} alt="heart Icon" className="hover:scale-110" />
           </div>
-          <div className=" cursor-pointer hover:text-purp">Sign Up</div>
-          <div className=" cursor-pointer hover:text-purp">Log In</div>
+          <div className=" cursor-pointer text-Tblack hover:text-purp">
+            Sign Up
+          </div>
+          <div className=" cursor-pointer text-Tblack hover:text-purp">
+            Log In
+          </div>
         </div>
         <div className="sm:hidden justify-end h-16 xx:inline-flex gap-2 border-bubble-gum">
           <div className="">

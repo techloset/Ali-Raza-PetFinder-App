@@ -58,7 +58,7 @@ export default function DetailedPage() {
             <div className="animate-spin rounded-full h-20 w-20 border-t-4 border-purp border-solid"></div>
           </div>
         )}
-        <div className="h-[770px] bg-slate-200 ">
+        <div className="h-[770px] bg-slate-100 ">
           <div className="h-[486px] xx:h-[340px] w-auto flex justify-center bg-black">
             <img
               src={(!loading && petDetail?.photos?.[0]?.full) || alternative}
@@ -70,20 +70,20 @@ export default function DetailedPage() {
             <img src={feedback} className="w-[25px] h-[75px] z-10" />
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:mb-12  lg:grid-cols-10 gap-8 w-full max-w-7xl mx-auto xx:px-0 px-4 md:px-0 relative xx:bottom-96 sm:bottom-56 md:bottom-64 lg:bottom-44 xx:justify-evenly">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:mb-12  lg:grid-cols-10 md:gap-8 w-full max-w-7xl mx-auto xx:px-0 px-4 md:px-0 relative xx:bottom-96 sm:bottom-56 md:bottom-64 lg:bottom-44 xx:justify-evenly">
           <div className="col-span-full lg:col-span-6 bg-white xx:mt-12 xx:rounded-none rounded-xl shadow-lg mb-8  md:mb-0 ">
             <div className="">
-              <div className="flex text-4xl font-400 font-normal xx:px-0 px-7 py-6 xx:justify-center">
+              <div className="flex text-4xl font-400 font-normal xx:px-0 px-7 py-6 xx:justify-center text-Tblack">
                 {petDetail?.name || "Name is not Given"}
               </div>
               <div className="flex text-base px-7 py-2 xx:justify-center sm:justify-center sm:inline-flex">
-                <Link to="" className="underline text-blue-700">
+                <Link to="" className="underline text-blue-700 ">
                   {petDetail?.breeds?.primary ||
                     petDetail?.breeds?.secondary ||
                     "Breed not defined"}
                 </Link>
                 <div className="px-1">.</div>
-                <div className="">
+                <div className="text-Tblack">
                   {petDetail?.contact?.address?.city ||
                     petDetail?.contact?.address.address2 ||
                     "Address is not defined"}
@@ -93,7 +93,7 @@ export default function DetailedPage() {
             </div>
             <hr className="w-auto mx-7" />
             <div className="m-7">
-              <div className="flex text-base xx:justify-center  sm:inline-flex">
+              <div className="flex text-base xx:justify-center  sm:inline-flex text-Tblack">
                 <div className="">{petDetail?.age || "Age not given"}</div>
                 <div className="px-2">.</div>
                 <div className="">{petDetail?.gender || "No gender"}</div>
@@ -103,36 +103,40 @@ export default function DetailedPage() {
             </div>
             <hr className="w-auto mx-7" />
             <div className="flex text-base gap-4 mt-3 h-[35px] sm:hidden md:hidden lg:hidden">
-              <div className="hover:border-b-2 border-indigo-500  flex justify-center w-16">
+              <div className="hover:border-b-2 border-indigo-500  flex justify-center w-16 text-Tblack">
                 About
               </div>
-              <div className="hover:border-b-2 border-indigo-500 ">
+              <div className="hover:border-b-2 border-indigo-500 text-Tblack">
                 Organization
               </div>
-              <div className="hover:border-b-2 border-indigo-500 ">Medium</div>
+              <div className="hover:border-b-2 border-indigo-500 text-Tblack">
+                Medium
+              </div>
             </div>
             <div className="xx:mt-10">
-              <div className="text-3xl px-7 py-5">About</div>
-              <div className="text-xl px-7 ">Health</div>
-              <div className="px-7">{petDetail?.description?.slice(0, 99)}</div>
+              <div className="text-3xl px-7 py-5 text-Tblack">About</div>
+              <div className="text-xl px-7 text-Tblack">Health</div>
+              <div className="px-7 text-Tblack">
+                {petDetail?.description?.slice(0, 99)}
+              </div>
             </div>
             <hr className="w-[90%] mx-auto mt-8 xx:hidden sm:hidden  md:flex" />
             <div className="mt-8">
-              <div className="inline-flex sm:mt-16 md:mt-0 mx-4 pb-4">
+              <div className="inline-flex sm:mt-16 md:mt-0 mx-4 pb-4 gap-2">
                 <div className=" ">
                   <img src={AlertImg} alt="alert icon" className="w-6 h-6" />
                 </div>
-                <div className="w-full">
+                <div className="w-full text-Tblack italic">
                   Petfinder recommends that you should always take reasonable
                   security steps before making online payments.
                 </div>
               </div>
             </div>
           </div>
-          <div className=" max-w-[423px] md:max-h-[293px] xx:max-h-[293px] xx:mx-4 max-h-[293px] mx-auto md:sm-auto lg:max-h-[293px] sm:flex sm:content-center pb-0 col-span-full  lg:col-span-4  text-white p-8 rounded-lg shadow-lg  md:mb-0 bg-purp sm:ml-62">
-            <div className=" pb-0 mb-0">
-              <div className="text-xl font-normal max-mt-6 text-center flex ">
-                Considering {petDetail?.name.slice(0, 9)} for adoption?
+          <div className=" md:w-[390px] xx:w-[374px] xx:ml-0 md:max-h-[293px] xx:max-h-[293px] xx:mx-4 max-h-[293px] mx-auto md:sm-auto lg:max-h-[293px] sm:flex content-center pb-0 col-span-full  lg:col-span-4  text-white p-8 rounded-lg shadow-lg  md:mb-0 bg-purp sm:ml-62 xx:mb-8   justify-center items-center">
+            <div className=" pb-0 mb-0 justify-center items-center ">
+              <div className="w-[320px] text-xl font-normal max-mt-6 text-center flex ">
+                Considering {petDetail?.name.slice(0, 5)} for adoption?
               </div>
               <div className="rounded-3xl  text-center mt-4 mb-4 bg-white border-2 text-purp hover:bg-purp hover:text-white hover:border-2 hover:bordre-white">
                 <button
@@ -145,7 +149,7 @@ export default function DetailedPage() {
               <div className="flex items-center justify-center rounded-3xl h-[45PX] text-center xx:mt-4 md:mt-8 border-2 border-white hover:bg-white hover:text-purp cursor-pointer">
                 READ FAQs
               </div>
-              <hr className="max-w-[410px] mt-6 border-1 border-black mx-[-32px]" />
+              <hr className="max-w-[410px] mt-6 border-1 border-black md:mx-[-35px] sm:mx-[-32px] xx:mx-[-32px]" />
               <div className="md:h-[67px] xx:h-[64px] sm:h-[55px] flex justify-around items-center sticky">
                 <div className="text-center cursor-pointer">SPONSOR</div>
                 <div className="w-[1px] md:h-[68px] sm:h-[56px] xx:h-[63px] xx:mt-2 relative xx:bottom-1 bg-black"></div>
@@ -156,15 +160,15 @@ export default function DetailedPage() {
               </div>
             </div>
           </div>
-          <div className="max-w-[393px] border-2  col-span-full md:mx-auto sm:mx-auto xx:mx-auto lg:col-start-7 lg:col-span-4 bg-white p-8 rounded-2xl shadow md:mb-0 relative  lg:bottom-44 lg:top-[-90px]  xx:top-8 sm:top-8 md:top-16 pb-0">
+          <div className="max-w-[393px] border-2  col-span-full md:mx-auto sm:mx-auto xx:mx-auto lg:col-start-7 lg:col-span-4 bg-white p-8 rounded-2xl shadow md:mb-0 relative  lg:bottom-44 lg:top-[-130px]  xx:top-8 sm:top-8 md:top-12 pb-0">
             <div className="flex bg-purp  justify-center items-center relative bottom-20 h-[100px] w-[100px] rounded-full mx-auto">
               <img src={PawHand} alt="" className="h-[60px] w-[58px]" />
             </div>
-            <div className=" relative bottom-12">
-              <div className="text-3xl text-center">
+            <div className=" relative bottom-16">
+              <div className="text-3xl text-center text-Tblack">
                 {petDetail?.organization_id} Animals In Need
               </div>
-              <div className="text-center mt-2">
+              <div className="text-center mt-2 text-Tblack">
                 {petDetail?.contact?.address.city ||
                   petDetail?.contact?.address.address2 ||
                   "Address is not defined"}
@@ -175,8 +179,8 @@ export default function DetailedPage() {
                   <img src={LocationIcon} alt="Location" />
                 </div>
                 <div className="">
-                  <div className="flex gap-3">Location Address</div>
-                  <div className="">
+                  <div className="flex gap-2 text-Tblack">Location Address</div>
+                  <div className="text-Tblack">
                     {petDetail?.contact?.address.city ||
                       petDetail?.contact?.address.address2 ||
                       "Address is not defined"}
@@ -189,14 +193,14 @@ export default function DetailedPage() {
                   <img src={PhoneIcon} alt="PhoneIcon" />
                 </div>
                 <div className="">
-                  <div className="flex gap-3">
+                  <div className="flex gap-3 text-Tblack">
                     {petDetail?.contact?.phone ||
                       petDetail?.contact?.email ||
                       "No phone number given"}
                   </div>
                 </div>
               </div>
-              <div className="flex items-center justify-center rounded-3xl h-[45PX] text-center mt-10 border-2 border-black hover:bg-purp hover:text-white hover:border-2 hover:border-white hover:shadow cursor-pointer">
+              <div className="flex items-center justify-center rounded-3xl h-[45PX] text-center mt-10 mb-[-30px] border-2 border-black hover:bg-purp hover:text-white hover:border-2 hover:border-white hover:shadow cursor-pointer text-Tblack">
                 <button type="button">MORE ABOUT US</button>
               </div>
             </div>

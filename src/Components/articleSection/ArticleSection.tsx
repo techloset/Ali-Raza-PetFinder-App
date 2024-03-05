@@ -27,10 +27,10 @@ export default function ArticleSection() {
               className="rounded-full border-[6px] border-white cursor-pointer"
             />
           </div>
-          <div className="max-h-[48px] flex justify-center text-xl relative bottom-12">
+          <div className="max-h-[48px] flex justify-center text-xl relative bottom-12 text-Tblack">
             Dog Adoption Articles
           </div>
-          <div className="h-[62px] flex justify-center relative bottom-8 xx:px-6 xx:text-center xx:mb-4 cursor-pointer">
+          <div className="h-[62px] flex justify-center relative bottom-8 xx:px-6 xx:text-center xx:mb-4 cursor-pointer text-Tblack">
             Learn more about caring for your new dog
           </div>
           <div className="h-[55px] hover:bg-purp hover:text-white shadow rounded-b-lg hover:rounded-b-lg text-purp flex justify-center items-center relative bottom-12 border-t-2 border-slate-200 cursor-pointer">
@@ -56,10 +56,10 @@ export default function ArticleSection() {
               className="rounded-full border-[6px] border-white cursor-pointer"
             />
           </div>
-          <div className="max-h-[48px] flex justify-center text-xl relative bottom-12">
+          <div className="max-h-[48px] flex justify-center text-xl relative bottom-12 text-Tblack">
             Cat Adoption Articles
           </div>
-          <div className="h-[62px] flex justify-center relative bottom-8 xx:px-6 xx:text-center xx:mb-4">
+          <div className="h-[62px] flex justify-center relative bottom-8 xx:px-6 xx:text-center xx:mb-4 text-Tblack">
             Learn more about caring for your new cat
           </div>
           <div className="h-[55px] text-purp hover:bg-purp shadow hover:text-white rounded-b-lg hover:rounded-b-lg  flex justify-center items-center relative bottom-12 border-t-2 border-slate-200 cursor-pointer">
