@@ -60,7 +60,7 @@ function HomeSection() {
               className="w-[79px] h-[79px] bg-cover"
             />
           </div>
-          <div className="h-[20px]">Dogs</div>
+          <div className="h-[20px] text-Tblack">Dogs</div>
         </div>
         <div className="w-[181px] h-[154.59px] rounded-md flex flex-col items-center shadow-xl gap-5 hover:scale-105 bg-white cursor-pointer">
           <div>
@@ -71,7 +71,7 @@ function HomeSection() {
               className="w-[79px] h-[79px] pt-3"
             />
           </div>
-          <div className="h-[20px]">Cats</div>
+          <div className="h-[20px] text-Tblack">Cats</div>
         </div>
         <div className="w-[181px] h-[154.59px] rounded-md flex flex-col items-center shadow-xl gap-5 hover:scale-105 bg-white cursor-pointer">
           <div>
@@ -82,7 +82,7 @@ function HomeSection() {
               className="w-[65px] h-[65px] pt-2 mt-2 mb-1"
             />
           </div>
-          <div className="h-[20px]">Other Animals</div>
+          <div className="h-[20px] text-Tblack">Other Animals</div>
         </div>
         <div className="w-[181px] h-[154.59px] rounded-md flex flex-col items-center shadow-xl gap-5 hover:scale-105 bg-white cursor-pointer">
           <div>
@@ -93,7 +93,7 @@ function HomeSection() {
               className="w-[79px] h-[79px] pt-4"
             />
           </div>
-          <div className="h-[20px]">Shelters & Rescues</div>
+          <div className="h-[20px] text-Tblack">Shelters & Rescues</div>
         </div>
       </div>
       <div className="flex flex-col-reverse justify-end items-end ">
