@@ -26,7 +26,7 @@ module.exports = {
 
       colors: {
         Tblack:'#4D4751',
-        purp:'#6504b5;',
+        purp:'#6504a9;',
         transparent: 'transparent',
         current: 'currentColor',
         'white': '#ffffff',

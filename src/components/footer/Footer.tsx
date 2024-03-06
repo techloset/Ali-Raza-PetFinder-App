@@ -202,13 +202,15 @@ export default function Footer() {
             </div>
           </details>
         </div>
-        <div className="w-full lg:px-[120px] h-[64px] flex flex-wrap xx:h-[250px] sm:h-[130px] md:h-[100px] gap-4 justify-center items-center text-white ">
+        <div className="2xl:w-[1210px] xl:w-[1220px] mx-auto h-[44px] flex flex-wrap xx:h-[250px] sm:h-[130px] md:h-[140px] 2l:gap-x-12 xl:gap-x-6 md:gap-x-0  justify-center items-center text-white pt-5 pb-8">
           {footLinks.map((link: string, i: number) => {
             return (
               <div
                 className={`${
-                  footLinks.length != i + 1 ? "border-r-2 border-white" : ""
-                }  pr-2 hover:underline cursor-pointer`}
+                  footLinks.length != i + 1
+                    ? "border-r-2 border-white text-xs"
+                    : ""
+                }  pr-2 pl-2 hover:underline cursor-pointer text-xs`}
                 key={i}
               >
                 {link}

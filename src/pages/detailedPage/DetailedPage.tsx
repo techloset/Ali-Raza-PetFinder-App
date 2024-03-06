@@ -70,7 +70,7 @@ export default function DetailedPage() {
             <img src={feedback} className="w-[25px] h-[75px] z-10" />
           </div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:mb-12  lg:grid-cols-10 md:gap-8 w-full max-w-7xl mx-auto xx:px-0 px-4 md:px-0 relative xx:bottom-96 sm:bottom-56 md:bottom-64 lg:bottom-44 xx:justify-evenly">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:mb-12  lg:grid-cols-10 md:gap-8 w-full max-w-7xl mx-auto xx:px-0 md:px-[120px] relative xx:bottom-96 sm:bottom-56 md:bottom-64 lg:bottom-44 xx:justify-evenly">
           <div className="col-span-full lg:col-span-6 bg-white xx:mt-12 xx:rounded-none rounded-xl shadow-lg mb-8  md:mb-0 ">
             <div className="">
               <div className="flex text-4xl font-400 font-normal xx:px-0 px-7 py-6 xx:justify-center text-Tblack">
@@ -200,7 +200,7 @@ export default function DetailedPage() {
                   </div>
                 </div>
               </div>
-              <div className="flex items-center justify-center rounded-3xl h-[45PX] text-center mt-10 mb-[-30px] border-2 border-black hover:bg-purp hover:text-white hover:border-2 hover:border-white hover:shadow cursor-pointer text-Tblack">
+              <div className="flex items-center justify-center rounded-3xl h-[45PX] text-center mt-10 mb-[-30px] border-2 border-Tblack hover:bg-purp hover:text-white hover:border-2 hover:border-white hover:shadow cursor-pointer text-Tblack">
                 <button type="button">MORE ABOUT US</button>
               </div>
             </div>
@@ -236,7 +236,7 @@ export default function DetailedPage() {
           </div>
           <hr className="w-full mx-10  mt-5 mb-5 border-[1px] border-slate-300" />
           <div className=" mx-10 ">
-            <div className="my-2">
+            <div className="my-2 ">
               Please note that {petDetail?.name} Animals In Need is not able to
               answer inquiries via email through Petfinder at this time.
             </div>
@@ -288,7 +288,7 @@ export default function DetailedPage() {
                       <div className=" bg-zinc-200 rounded-tl-lg rounded-tr-lg">
                         <Link to={`/details/${item.id}`}>
                           <img
-                            className="w-[375px] rounded-tl-lg rounded-tr-lg object-cover h-[231.20px]"
+                            className="w-[375px] rounded-tl-lg rounded-tr-lg object-cover h-[231.20px] "
                             src={item?.photos[0]?.full || alternative}
                           />
                         </Link>
@@ -296,21 +296,20 @@ export default function DetailedPage() {
                       <div className=" top-[-10px] h-[70px] bg-white text-purp block">
                         <div className="flex rounded-tl-3xl rounded-tr-3xl relative h-[9px] bg-white top-[-8px]"></div>
                         <div className="h-8 bg-white">
-                          <div className="  text-xl inline-flex bg-white text-slate-800 mb-2">
+                          <div className="  text-xl inline-flex bg-white text-Tblack mb-2">
                             {item?.name?.slice(0, 20)}
                           </div>
                           <br />
-                          <div className="inline-flex h-14 text-slate-800 mx-10 mb-5">
+                          <div className="inline-flex h-14 text-Tblack mx-10 mb-5">
                             {item?.description?.slice(0, 99) ||
                               "Description is not Avilable"}
-                            b
                           </div>
                           <hr className="border border-slate-200 w-full mt-5 " />
                           <div className="inline-flex mt-3">
                             <Link
                               to={`/details/${item.id}`}
                               type="button"
-                              className="bg-white w-full text-slate-800 font-14"
+                              className="bg-white w-full text-Tblack font-14"
                             >
                               Read More
                             </Link>
