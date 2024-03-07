@@ -6,7 +6,7 @@ import {
 export default function PlaningToAdoptPet() {
   return (
     <>
-      <div className="h-[441px] grid justify-items-center xx:mb-[550px] sm:mb-[350px] md:mb-[300px] bug:mb-[300px] lg:mb-0">
+      <div className="h-[441px] grid justify-items-center xx:mb-[620px] sm:mb-[350px] md:mb-[300px] bug:mb-[300px] lg:mb-0 ">
         <div className="flex justify-center items-center text-Tblack xx:text-2xl sm:text-3xl md:text-4xl h-[48px] mb-[30px]  font-arial">
           PLANNING TO ADOPT A PET?
         </div>

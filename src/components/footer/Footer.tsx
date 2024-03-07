@@ -27,11 +27,11 @@ export default function Footer() {
         </div>
 
         <div className="Footer bg-purp px-3 flex md:mx-4 lg:mx-10 xx:justify-center xx:items-center sm:justify-center sm:items-center flex-col">
-          <div className="mx-auto lg:w-[1267px]  ">
-            <div className="bg-purp flex lg:justify-start max-w-[900px]">
+          <div className="">
+            <div className="bg-purp flex lg:justify-start xl:w-[1250px] xx:max-w-[300px]">
               <Link
                 to={"/"}
-                className="flex xx:justify-center xx:mt-10 sm:mt-8 sm:justify-center lg:mb-[30px] lg:justify-center cursor-pointer"
+                className="flex xx:justify-center xx:mt-10 sm:mt-8 sm:justify-center lg:mb-[30px] md:justify-start lg:justify-start cursor-pointer"
               >
                 <img src={Logo} className="" alt="" />
               </Link>
