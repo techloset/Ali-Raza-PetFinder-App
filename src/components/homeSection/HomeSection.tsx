@@ -24,7 +24,7 @@ function HomeSection() {
               name="search"
             />
 
-            <div className="w-[80px] flex mx-2 justify-center hover:transform hover:scale-105 md:hover:h-[40px]">
+            <div className="w-[80px] flex mx-2 justify-center hover:transform hover:scale-105 ">
               <img
                 src={searchIcon}
                 alt=""
